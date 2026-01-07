@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="FinTrack/App.axaml" value="FinTrack/FinTrack.csproj" />
+        <entry key="FinTrack/Styles/StylesDefaultAplicativo.axaml" value="FinTrack/FinTrack.csproj" />
+        <entry key="FinTrack/Views/MainWindow.axaml" value="FinTrack/FinTrack.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
