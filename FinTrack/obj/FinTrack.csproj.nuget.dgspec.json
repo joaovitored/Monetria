@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj": {}
+    "c:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj": {
+    "c:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj",
+        "projectUniqueName": "c:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj",
         "projectName": "FinTrack",
-        "projectPath": "C:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj",
+        "projectPath": "c:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj",
         "packagesPath": "C:\\Users\\Joao Vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\obj\\",
+        "outputPath": "c:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

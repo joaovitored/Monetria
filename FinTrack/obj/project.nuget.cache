@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "twJYfS6XfRc=",
+  "dgSpecHash": "l/r7R4XXMn0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj",
+  "projectFilePath": "c:\\Users\\Joao Vitor\\Documents\\GitHub\\FinTrack\\FinTrack\\FinTrack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\avalonia\\11.3.10\\avalonia.11.3.10.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.25547.20250602\\avalonia.angle.windows.natives.2.1.25547.20250602.nupkg.sha512",
