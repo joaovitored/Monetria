@@ -41,6 +41,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Views/RelatorioPageView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Views/SobreMimPageView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

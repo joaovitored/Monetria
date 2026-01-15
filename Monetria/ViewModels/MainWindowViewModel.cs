@@ -40,7 +40,7 @@ public partial class MainWindowViewModel : ViewModelBase
         
         //fazer uma pagina nova para esses dois aqui
         new ListItemTemplate(typeof(CategoriasPageViewModel),"Categorias","grid_regular"),
-        new ListItemTemplate(typeof(TransacaoPageViewModel),"Relatórios","book_pulse_regular"),
+        new ListItemTemplate(typeof(RelatorioPageViewModel),"Relatórios","book_pulse_regular"),
 
     };
 
