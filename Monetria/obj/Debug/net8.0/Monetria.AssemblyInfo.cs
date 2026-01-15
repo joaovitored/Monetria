@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Monetria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d3fbf8fc15194e4ee29841b40335941a4622563")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76c940be8e917500e0d12872345908b3b2eed281")]
 [assembly: System.Reflection.AssemblyProductAttribute("Monetria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Monetria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

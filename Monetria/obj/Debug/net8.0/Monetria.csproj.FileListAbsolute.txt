@@ -149,3 +149,8 @@ C:\Users\Joao Vitor\Documents\GitHub\Monetria\Monetria\obj\Debug\net8.0\refint\M
 C:\Users\Joao Vitor\Documents\GitHub\Monetria\Monetria\obj\Debug\net8.0\Monetria.pdb
 C:\Users\Joao Vitor\Documents\GitHub\Monetria\Monetria\obj\Debug\net8.0\Monetria.genruntimeconfig.cache
 C:\Users\Joao Vitor\Documents\GitHub\Monetria\Monetria\obj\Debug\net8.0\ref\Monetria.dll
+C:\Users\Joao Vitor\Documents\GitHub\Monetria\Monetria\bin\Debug\net8.0\ActiproSoftware.Avalonia.Core.dll
+C:\Users\Joao Vitor\Documents\GitHub\Monetria\Monetria\bin\Debug\net8.0\ActiproSoftware.Avalonia.Shared.dll
+C:\Users\Joao Vitor\Documents\GitHub\Monetria\Monetria\bin\Debug\net8.0\ActiproSoftware.Avalonia.Bars.dll
+C:\Users\Joao Vitor\Documents\GitHub\Monetria\Monetria\bin\Debug\net8.0\ActiproSoftware.Avalonia.Docking.dll
+C:\Users\Joao Vitor\Documents\GitHub\Monetria\Monetria\bin\Debug\net8.0\ActiproSoftware.Avalonia.Fundamentals.dll

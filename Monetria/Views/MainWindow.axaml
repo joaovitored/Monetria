@@ -9,89 +9,92 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/Images/Monetria-Dark-Mode-icon.png"
         Title="Monetria">
-
-    <Grid Background="{DynamicResource FundoCorPrimaria}" ColumnDefinitions="Auto,*" >
-        
-        
+    
 
         <SplitView IsPaneOpen="{Binding IsPaneOpen }"
                    DisplayMode="CompactInline"
                    OpenPaneLength="200"
                    CompactPaneLength="50"
                    PaneBackground="#1e1e1e"
-                   Background="#1e1e1e"
-                   >
+                   Background="#1e1e1e">
             
             <SplitView.Pane>
-                <Grid RowDefinitions="*,Auto" Background="#1e1e1e" Margin="5">
-                <StackPanel Spacing="5" Grid.Row="0">
-                    <Button Command="{Binding 
-                    OpenPaneCommand}" 
-                            HorizontalAlignment="Left">
-                        
-                        <PathIcon Foreground="White"
-                                  Data="{StaticResource 
-                                  line_horizontal_3_regular}"></PathIcon>
-                    </Button>
-                    <Grid>
-                                    <Image Source="../Assets/Images/Monetria-Dark-Mode.png" HorizontalAlignment="Stretch" VerticalAlignment="Top" ></Image>
-                    </Grid>
-                    <ListBox Background="#1e1e1e" Foreground="White">
-                        
-                        <ListBoxItem>
-                            <StackPanel Orientation="Horizontal">
-                            <PathIcon Foreground="White" Data="{StaticResource glance_regular}"></PathIcon>
-                            <TextBlock Margin="10,0,0,0">Dashboard</TextBlock>
-                            </StackPanel>
-                        </ListBoxItem>
-                        
-                        <ListBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <PathIcon Foreground="White" Data="{StaticResource money_regular}"></PathIcon>
-                            <TextBlock Margin="10,0,0,0">Transações</TextBlock>
-                        </StackPanel>
-                        </ListBoxItem>
-                        
-                        <ListBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <PathIcon Foreground="White" Data="{StaticResource grid_regular}"></PathIcon>
-                            <TextBlock Margin="10,0,0,0">Categorias</TextBlock>
-                        </StackPanel>
-                        </ListBoxItem>
-                        
-                        <ListBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <PathIcon Foreground="White" Data="{StaticResource book_pulse_regular}"></PathIcon>
-                            <TextBlock Margin="10,0,0,0">Relatórios</TextBlock>
-                        </StackPanel>
-                        </ListBoxItem>
-                       
-                    </ListBox>
-                </StackPanel>
+         <Grid RowDefinitions="*,Auto" Background="#1e1e1e" Margin="5">
 
-                    <ListBoxItem Grid.Row="1"
-                            HorizontalAlignment="Stretch"
-                            Margin="0,10,0,0"
-                            Foreground="White">
-                        <StackPanel Orientation="Horizontal">
-                            <PathIcon Foreground="White" Data="{StaticResource settings_regular}"/>
-                            <TextBlock Margin="15,0,0,0"> Configurações</TextBlock>
-                        </StackPanel>
-                    </ListBoxItem>
-                    
-                </Grid>
-            </SplitView.Pane>
+        <!-- conteudo principal -->
+        <Grid Grid.Row="0"
+              RowDefinitions="Auto,Auto,*"
+              Background="#1e1e1e">
+
+            <!-- Botão -->
+            <Button Command="{Binding OpenPaneCommand}"
+                               HorizontalAlignment="Left">
+                               <PathIcon Foreground="White"
+                               Data="{StaticResource line_horizontal_3_regular}" />
+            </Button>
+
+            <!-- Logo -->
+            <Image Grid.Row="1"
+                   Source="../Assets/Images/Monetria-Dark-Mode.png"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top" />
+
+            <!-- MENU -->
+            <Grid Grid.Row="2"
+                  RowDefinitions="*,Auto"
+                  Background="#1e1e1e">
+
+                <!-- Itens do topo -->
+                <ListBox Grid.Row="0"
+                         ItemsSource="{Binding ItemsTopo}"
+                         SelectedItem="{Binding SelectedListItem}"
+                         Background="#1e1e1e"
+                         Foreground="White">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type vm:ListItemTemplate}">
+                            <StackPanel Orientation="Horizontal" Spacing="15">
+                                <PathIcon Foreground="White"
+                                          Data="{Binding ListItemIcon}" />
+                                <TextBlock Text="{Binding Label}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <!-- Configurações FIXO EMBAIXO -->
+                <ListBox Grid.Row="1"
+                         ItemsSource="{Binding ItemsFundo}"
+                         SelectedItem="{Binding SelectedListItem}"
+                         Background="#1e1e1e"
+                         Foreground="White">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type vm:ListItemTemplate}">
+                            <StackPanel Orientation="Horizontal" Spacing="15">
+                                <PathIcon Foreground="White"
+                                          Data="{Binding ListItemIcon}" />
+                                <TextBlock Text="{Binding Label}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</SplitView.Pane>
+
             
             
             
             <SplitView.Content>
                 <Border CornerRadius="10,0,0,0" Background="#2d2d2d">
+                <TransitioningContentControl Content="{Binding CurrentPage}"></TransitioningContentControl>
                 </Border>
             </SplitView.Content>
         </SplitView>
            
 
         
-    </Grid>
+    
 
 </Window>

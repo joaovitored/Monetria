@@ -1,0 +1,16 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
+
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Monetria.Views.TransacaoPageView">
+    
+    <StackPanel Spacing="10" Margin="10" Orientation="Vertical">
+    <TextBlock Text="Bem vindo a aba de transações!" FontSize="20" FontWeight="Bold"></TextBlock>
+    <TextBox BorderThickness="0" TextWrapping="Wrap"> Avatar controls are used to represent people or objects. They can render a full-size image, a centered glyph, a person's initials, or text.
+    </TextBox>
+        <actipro:Avatar Description="Zé Ninguém" Height="50"></actipro:Avatar>
+    </StackPanel>
+</UserControl>
