@@ -13,7 +13,7 @@ public class CategoriasPageViewModel : ViewModelBase
     {
         var categorias = new List<Categoria>
         {
-            new Categoria("João Vitor", "Verde", "Finança", true)
+            new Categoria("Marcelo", "Verde", "Finança", true)
         };
         Categorias = new ObservableCollection<Categoria>(categorias);
     }
