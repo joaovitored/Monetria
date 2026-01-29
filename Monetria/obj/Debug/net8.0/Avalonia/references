@@ -28,7 +28,12 @@ C:\Users\Joao Vitor\.nuget\packages\avalonia\11.3.10\ref\net8.0\Avalonia.Vulkan.
 C:\Users\Joao Vitor\.nuget\packages\avalonia.win32\11.3.10\lib\net8.0\Avalonia.Win32.Automation.dll
 C:\Users\Joao Vitor\.nuget\packages\avalonia.win32\11.3.10\lib\net8.0\Avalonia.Win32.dll
 C:\Users\Joao Vitor\.nuget\packages\avalonia.x11\11.3.10\lib\net8.0\Avalonia.X11.dll
+C:\Users\Joao Vitor\.nuget\packages\closedxml\0.105.0\lib\netstandard2.1\ClosedXML.dll
+C:\Users\Joao Vitor\.nuget\packages\closedxml.parser\2.0.0\lib\netstandard2.1\ClosedXML.Parser.dll
 C:\Users\Joao Vitor\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll
+C:\Users\Joao Vitor\.nuget\packages\documentformat.openxml\3.1.1\lib\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\Joao Vitor\.nuget\packages\documentformat.openxml.framework\3.1.1\lib\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\Joao Vitor\.nuget\packages\excelnumberformat\1.1.0\lib\netstandard2.0\ExcelNumberFormat.dll
 C:\Users\Joao Vitor\.nuget\packages\harfbuzzsharp\8.3.1.1\lib\net8.0\HarfBuzzSharp.dll
 C:\Users\Joao Vitor\.nuget\packages\livechartscore\2.0.0-rc6.1\lib\net8.0\LiveChartsCore.dll
 C:\Users\Joao Vitor\.nuget\packages\livechartscore.skiasharpview.avalonia\2.0.0-rc6.1\lib\net8.0\LiveChartsCore.SkiaSharpView.Avalonia.dll
@@ -41,6 +46,8 @@ C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\
 C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\Microsoft.Win32.Registry.dll
 C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\mscorlib.dll
 C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\netstandard.dll
+C:\Users\Joao Vitor\.nuget\packages\rbush.signed\4.0.0\lib\net8.0\RBush.dll
+C:\Users\Joao Vitor\.nuget\packages\sixlabors.fonts\1.0.0\lib\netcoreapp3.1\SixLabors.Fonts.dll
 C:\Users\Joao Vitor\.nuget\packages\skiasharp\2.88.9\lib\net6.0\SkiaSharp.dll
 C:\Users\Joao Vitor\.nuget\packages\skiasharp.harfbuzz\2.88.9\lib\net6.0\SkiaSharp.HarfBuzz.dll
 C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\System.AppContext.dll
@@ -93,6 +100,7 @@ C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\
 C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\System.IO.FileSystem.Watcher.dll
 C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\System.IO.IsolatedStorage.dll
 C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\System.IO.MemoryMappedFiles.dll
+C:\Users\Joao Vitor\.nuget\packages\system.io.packaging\8.0.1\lib\net8.0\System.IO.Packaging.dll
 C:\Users\Joao Vitor\.nuget\packages\system.io.pipelines\8.0.0\lib\net8.0\System.IO.Pipelines.dll
 C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\System.IO.Pipes.AccessControl.dll
 C:\Users\Joao Vitor\.nuget\packages\microsoft.netcore.app.ref\8.0.23\ref\net8.0\System.IO.Pipes.dll

@@ -10,7 +10,22 @@
     <StackPanel Spacing="10" Margin="10" Orientation="Vertical">
         <TextBlock Text="Sobre mim" FontSize="20" FontWeight="Bold"></TextBlock>
         
+        <StackPanel Spacing="10" Margin="10" Orientation="Vertical">
+            <TextBlock Text="Sobre mim" FontSize="20" FontWeight="Bold"></TextBlock>
         
+            <actipro:Avatar Description="Dev" HorizontalAlignment="Left" Width="223">
+                <Image Source="avares://Monetria/Assets/Images/Dev.jpg" Stretch="UniformToFill" />
+            </actipro:Avatar>
+
+
+            <TextBlock  TextWrapping="Wrap">
+                Meu nome é João Vitor,atualmente eu tenho 19 anos,estou no terceiro período no curso de Análise
+                e Desenvolvimento de Sistemas.
+                Este é o meu primeiro projeto utilizando C# e o Framework do Avalonia UI. 
+             
+            </TextBlock>
+        
+        </StackPanel>
         
     </StackPanel>
         

@@ -9,5 +9,6 @@ public partial class TransacaoPageView : UserControl
     public TransacaoPageView()
     {
         InitializeComponent();
+
     }
 }

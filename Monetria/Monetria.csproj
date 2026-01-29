@@ -23,6 +23,7 @@
             <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
+        <PackageReference Include="ClosedXML" Version="0.105.0" />
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
         <PackageReference Include="LiveChartsCore" Version="2.0.0-rc6.1" />
         <PackageReference Include="LiveChartsCore.SkiaSharpView" Version="2.0.0-rc6.1" />

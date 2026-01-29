@@ -1,26 +1,34 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System;
 
 namespace Monetria.Models;
 
-public class Transacao
+public partial class Transacao : ObservableObject
 {
-    public bool Selecionar { get; set; }
-    public DateOnly Data { get; set; }
-    public string Tipo { get; set; }
-    public string Categoria {get; set;}
-    public string Descricao {get; set;}
-    public decimal Valor {get; set;}
-    
-    
+    [ObservableProperty] private bool _selecionar;
+    [ObservableProperty] private DateTime _data;
+    [ObservableProperty] private string _tipo;
+    [ObservableProperty] private string _categoria;
+    [ObservableProperty] private string _descricao;
+    [ObservableProperty] private decimal _valor;
 
-    public Transacao(bool selecionar,DateOnly data, string tipo, string categoria,string descricao, decimal valor)
+    // Comando de exclusão
+    public IRelayCommand ExcluirCommand { get; }
+
+    public Transacao(Action<Transacao> excluir,
+        bool selecionar, DateTime data, string tipo, string categoria,
+        string descricao, decimal valor)
     {
-        Selecionar = selecionar;
-        Data = data;
-        Tipo = tipo;
-        Categoria = categoria;
-        Descricao = descricao;
-        Valor = valor;
-        
+        _selecionar = selecionar;
+        _data = data;
+        _tipo = tipo;
+        _categoria = categoria;
+        _descricao = descricao;
+        _valor = valor;
+
+        ExcluirCommand = new RelayCommand(() => excluir(this));
     }
+    public string ValorFormatado => $"R$ {_valor:N2}";
+
 }
