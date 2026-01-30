@@ -76,9 +76,10 @@
                     </DataGridTemplateColumn.CellTemplate>
                     <DataGridTemplateColumn.CellEditingTemplate>
                         <DataTemplate>
-                            <TextBox Text="{Binding Valor, Mode=TwoWay, StringFormat=F2}" 
+                            <TextBox Text="{Binding Valor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                                      HorizontalAlignment="Center" 
                                      VerticalAlignment="Center"/>
+
                         </DataTemplate>
                     </DataGridTemplateColumn.CellEditingTemplate>
                 </DataGridTemplateColumn>

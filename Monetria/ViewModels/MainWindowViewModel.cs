@@ -6,78 +6,100 @@ using System.Collections.ObjectModel;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using Monetria.Services;
 
-namespace Monetria.ViewModels;
-
-public partial class MainWindowViewModel : ViewModelBase
-{   // abre e fecha a sidebar
-    [ObservableProperty] 
-    private bool _isPaneOpen = true;
-
-    //vai mostrar a primeira pagina
-    [ObservableProperty] 
-    private ViewModelBase _currentPage = new DashboardPageViewModel();
-    
-    
-    
-    [ObservableProperty] 
-    private ListItemTemplate? _selectedListItem;
-    
-    partial void OnSelectedListItemChanged(ListItemTemplate? value)
-    {
-        if (value is null) return;
-        var instance = Activator.CreateInstance(value.ModelType);
-        if (instance == null) return;
-        CurrentPage = (ViewModelBase)instance;
-
-
-    }
-    
-    public ObservableCollection<ListItemTemplate> ItemsTopo { get; }= new()
-    {
-        new ListItemTemplate(typeof(DashboardPageViewModel),"Dashboard","glance_regular"),
-        new ListItemTemplate(typeof(TransacaoPageViewModel),"Transações","money_regular"),
-        
-        //fazer uma pagina nova para esses dois aqui
-        new ListItemTemplate(typeof(CategoriasPageViewModel),"Categorias","grid_regular"),
-        new ListItemTemplate(typeof(RelatorioPageViewModel),"Relatórios","book_pulse_regular"),
-
-    };
-
-    public ObservableCollection<ListItemTemplate> ItemsFundo { get; } = new()
-    {
-        new ListItemTemplate(typeof(ConfiguracoesPageViewModel), "Configurações", "settings_regular"),
-        new ListItemTemplate(typeof(SobreMimPageViewModel),"Sobre Mim", "inprivate_account_regular")
-    };
-
-    [RelayCommand]
-    private void OpenPane()
-    {
-        IsPaneOpen = !IsPaneOpen;
-    }
-   
-    
-}
-
-public class ListItemTemplate
+namespace Monetria.ViewModels
 {
-    public string Label { get; }
-    public Type ModelType { get; }
-    public StreamGeometry? ListItemIcon { get; }
-    public ListItemTemplate(Type type,string label,string iconKey)
+    public partial class MainWindowViewModel : ViewModelBase
     {
-        ModelType = type;
-        Label = label;
+        // Singleton do serviço de transações compartilhado
+        private readonly TransacaoService _transacaoService = AppServices.TransacaoService;
 
-        if (Application.Current is not null &&
-            Application.Current.TryFindResource(iconKey, out var resource) &&
-            resource is StreamGeometry geometry)
+        // Abre e fecha a sidebar
+        [ObservableProperty] 
+        private bool _isPaneOpen = true;
+
+        // Página atual
+        [ObservableProperty] 
+        private ViewModelBase _currentPage;
+
+        // Item selecionado no menu
+        [ObservableProperty] 
+        private ListItemTemplate? _selectedListItem;
+
+        public MainWindowViewModel()
         {
-            ListItemIcon = geometry;
+            // Página inicial
+            _currentPage = new DashboardPageViewModel(_transacaoService);
         }
-        else
+
+        partial void OnSelectedListItemChanged(ListItemTemplate? value)
         {
-            ListItemIcon = null; // estado válido
+            if (value is null) return;
+
+            object? instance;
+
+            // Se for Dashboard, precisa passar o serviço
+            if (value.ModelType == typeof(DashboardPageViewModel))
+            {
+                instance = Activator.CreateInstance(value.ModelType, _transacaoService);
+            }
+            else if (value.ModelType == typeof(TransacaoPageViewModel))
+            {
+                instance = Activator.CreateInstance(value.ModelType, _transacaoService);
+            }
+            else
+            {
+                // Outras páginas sem parâmetro
+                instance = Activator.CreateInstance(value.ModelType);
+            }
+
+            if (instance != null)
+                CurrentPage = (ViewModelBase)instance;
+        }
+
+        public ObservableCollection<ListItemTemplate> ItemsTopo { get; } = new()
+        {
+            new ListItemTemplate(typeof(DashboardPageViewModel), "Dashboard", "glance_regular"),
+            new ListItemTemplate(typeof(TransacaoPageViewModel), "Transações", "money_regular"),
+            new ListItemTemplate(typeof(CategoriasPageViewModel), "Categorias", "grid_regular"),
+            new ListItemTemplate(typeof(RelatorioPageViewModel), "Relatórios", "book_pulse_regular"),
+        };
+
+        public ObservableCollection<ListItemTemplate> ItemsFundo { get; } = new()
+        {
+            new ListItemTemplate(typeof(ConfiguracoesPageViewModel), "Configurações", "settings_regular"),
+            new ListItemTemplate(typeof(SobreMimPageViewModel), "Sobre Mim", "inprivate_account_regular")
+        };
+
+        [RelayCommand]
+        private void OpenPane()
+        {
+            IsPaneOpen = !IsPaneOpen;
+        }
+    }
+
+    public class ListItemTemplate
+    {
+        public string Label { get; }
+        public Type ModelType { get; }
+        public StreamGeometry? ListItemIcon { get; }
+
+        public ListItemTemplate(Type type, string label, string iconKey)
+        {
+            ModelType = type;
+            Label = label;
+
+            if (Application.Current is not null &&
+                Application.Current.TryFindResource(iconKey, out var resource) &&
+                resource is StreamGeometry geometry)
+            {
+                ListItemIcon = geometry;
+            }
+            else
+            {
+                ListItemIcon = null; // estado válido
+            }
         }
     }
 }

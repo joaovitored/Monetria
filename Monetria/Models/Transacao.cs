@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
+using System.Text.Json.Serialization;
 
 namespace Monetria.Models;
 
@@ -11,17 +12,24 @@ public partial class Transacao : ObservableObject
     [ObservableProperty] private string _tipo;
     [ObservableProperty] private string _categoria;
     [ObservableProperty] private string _descricao;
-    [ObservableProperty] private decimal _valor;
+    [ObservableProperty] private decimal _valor = 0m;
 
-    // Comando de exclusão
-    public IRelayCommand ExcluirCommand { get; }
+    [JsonIgnore]
+    public IRelayCommand ExcluirCommand { get; set; }  // ✅ setter adicionado
+
+    [JsonIgnore]
+    public string ValorFormatado => $"R$ {Valor:N2}";
 
     public Transacao(Action<Transacao> excluir,
-        bool selecionar, DateTime data, string tipo, string categoria,
-        string descricao, decimal valor)
+        bool selecionar = false,
+        DateTime? data = null,
+        string tipo = "",
+        string categoria = "",
+        string descricao = "",
+        decimal valor = 0m)
     {
         _selecionar = selecionar;
-        _data = data;
+        _data = data ?? DateTime.Now;
         _tipo = tipo;
         _categoria = categoria;
         _descricao = descricao;
@@ -29,6 +37,16 @@ public partial class Transacao : ObservableObject
 
         ExcluirCommand = new RelayCommand(() => excluir(this));
     }
-    public string ValorFormatado => $"R$ {_valor:N2}";
 
+    [JsonConstructor]
+    public Transacao(DateTime data, string tipo, string categoria, string descricao, decimal valor)
+    {
+        _data = data;
+        _tipo = tipo;
+        _categoria = categoria;
+        _descricao = descricao;
+        _valor = valor;
+
+        ExcluirCommand = null!;
+    }
 }

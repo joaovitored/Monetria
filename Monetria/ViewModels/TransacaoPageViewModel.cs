@@ -1,56 +1,38 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using Monetria.Models;
-using CommunityToolkit.Mvvm.Input;
-using Avalonia.Controls;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Avalonia.Controls;
 using ClosedXML.Excel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Monetria.Models;
+using Monetria.Services;
 
 namespace Monetria.ViewModels;
 
 public partial class TransacaoPageViewModel : ViewModelBase
 {
-    public ObservableCollection<Transacao> Transacoes { get; }
+    private readonly TransacaoService _service;
 
-    public TransacaoPageViewModel()
+    public ObservableCollection<Transacao> Transacoes => _service.Transacoes;
+
+    public TransacaoPageViewModel(TransacaoService service)
     {
-        // Lista inicial de transações
-        Transacoes = new ObservableCollection<Transacao>
-        {
-            new Transacao(
-                Excluir,
-                selecionar: false,
-                data: new DateTime(2023, 10, 20),
-                tipo: "Teste",
-                categoria: "Categoria",
-                descricao: "Descricao inicial",
-                valor: 10.50m
-            )
-        };
+        _service = service;
     }
 
     [RelayCommand]
     public void NovaTransacao()
     {
-        var nova = new Transacao(
-            Excluir,
-            selecionar: false,
-            data: DateTime.Now,
-            tipo: "Tipo",
-            categoria: "Categoria",
-            descricao: "Nova descrição",
-            valor: 0m
-        );
-
-        Transacoes.Add(nova);
+        var t = new Transacao(_service.RemoverTransacao);
+        _service.AdicionarTransacao(t);
     }
 
     [RelayCommand]
-    public void Excluir(Transacao transacao)
+    public void Excluir(Transacao t)
     {
-        if (transacao == null) return;
-        Transacoes.Remove(transacao);
+        if (t != null) _service.RemoverTransacao(t);
     }
 
     [RelayCommand]
@@ -68,10 +50,10 @@ public partial class TransacaoPageViewModel : ViewModelBase
                 DefaultExtension = "xlsx"
             };
 
-            // Obtém referência à janela principal
-            var mainWindow = App.Current.ApplicationLifetime is Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime desktop
-                ? desktop.MainWindow
-                : null;
+            var mainWindow = App.Current.ApplicationLifetime
+                is Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime desktop
+                    ? desktop.MainWindow
+                    : null;
 
             if (mainWindow == null) return;
 
@@ -89,7 +71,7 @@ public partial class TransacaoPageViewModel : ViewModelBase
             worksheet.Cell(1, 5).Value = "Valor";
 
             int row = 2;
-            foreach (var t in Transacoes)
+            foreach (var t in _service.Transacoes)
             {
                 worksheet.Cell(row, 1).Value = t.Data;
                 worksheet.Cell(row, 2).Value = t.Tipo;
@@ -99,9 +81,7 @@ public partial class TransacaoPageViewModel : ViewModelBase
                 row++;
             }
 
-            // Ajusta a largura das colunas automaticamente
             worksheet.Columns().AdjustToContents();
-
             workbook.SaveAs(caminho);
 
             Console.WriteLine($"Excel exportado para: {caminho}");
