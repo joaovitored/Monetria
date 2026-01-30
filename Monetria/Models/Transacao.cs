@@ -15,7 +15,7 @@ public partial class Transacao : ObservableObject
     [ObservableProperty] private decimal _valor = 0m;
 
     [JsonIgnore]
-    public IRelayCommand ExcluirCommand { get; set; }  // ✅ setter adicionado
+    public IRelayCommand ExcluirCommand { get; set; }  
 
     [JsonIgnore]
     public string ValorFormatado => $"R$ {Valor:N2}";
