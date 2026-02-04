@@ -3,52 +3,52 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:Monetria.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Monetria.Views.RelatorioPageView"
              xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             x:Class="Monetria.Views.RelatorioPageView"
              x:DataType="vm:RelatorioPageViewModel">
-    
+
     <ScrollViewer>
-    <StackPanel Spacing="10" Margin="10" Orientation="Vertical">
-    <TextBlock Text="Bem vindo a aba de categorias!" FontSize="20" FontWeight="Bold"></TextBlock>
-    <Grid></Grid>
-       <TextBlock>Filtros:</TextBlock>
-        
-        <Grid ColumnDefinitions="120,*,Auto,*">
-        <SplitButton  Grid.Column="0" Content="Mês" >
-            <SplitButton.Flyout>
-                <MenuFlyout Placement="Bottom">
-                </MenuFlyout>
-            </SplitButton.Flyout>
-        </SplitButton>
-        
-            <SplitButton  Grid.Column="1" Content="Ano" >
-                <SplitButton.Flyout>
-                    <MenuFlyout Placement="Bottom">
-                    </MenuFlyout>
-                </SplitButton.Flyout>
-            </SplitButton>
-        </Grid>
-        
-        <Grid ColumnDefinitions="*,*"
-              ColumnSpacing="16">
+        <StackPanel Spacing="16" Margin="16">
+            <TextBlock Text="Relatório de Transações" FontSize="20" FontWeight="Bold"/>
 
-            <Border Padding="10" CornerRadius="6" Height="440">
-                <lvc:PieChart Series="{Binding }" />
-            </Border>
+            <!-- Filtros -->
+            <Grid ColumnDefinitions="120,*,120,*" Margin="0,0,0,10">
+                <ComboBox Grid.Column="0" ItemsSource="{Binding MesesDisponiveis}" SelectedItem="{Binding MesSelecionado}" />
+                <ComboBox Grid.Column="1" ItemsSource="{Binding AnosDisponiveis}" SelectedItem="{Binding AnoSelecionado}" />
+            </Grid>
 
-            <Border Padding="10" CornerRadius="6 " Height="440"
-                    Grid.Column="1">
-                <lvc:CartesianChart Series="{Binding }" />
-            </Border>
-        </Grid>
+            <!-- Gráficos lado a lado -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="16">
+                <!-- Pizza -->
+                <StackPanel Grid.Column="0" Spacing="6">
+                    <TextBlock Text="Distribuição de despesas por categoria" FontWeight="SemiBold"/>
+                    <TextBlock Text="Mostra quanto você gasta em cada categoria" FontSize="12" Foreground="Gray"/>
+                    <Border Padding="10" CornerRadius="6" Height="400">
+                        <lvc:PieChart Series="{Binding PieSeries}" />
+                    </Border>
+                </StackPanel>
 
-        <TextBlock> Evolução mensal do saldo</TextBlock>
-        <lvc:CartesianChart
-            Grid.Row="2" Height="450" Padding="10" CornerRadius="6 "  HorizontalAlignment="Stretch"
-            Series="{Binding }"
-            XAxes="{Binding }" />
-        
-</StackPanel>
+                <!-- Barras -->
+                <StackPanel Grid.Column="1" Spacing="6">
+                    <TextBlock Text="Receitas e Despesas por categoria" FontWeight="SemiBold"/>
+                    <TextBlock Text="Comparação de valores por categoria" FontSize="12" Foreground="Gray"/>
+                    <Border Padding="10" CornerRadius="6" Height="400">
+                        <lvc:CartesianChart Series="{Binding BarSeries}" />
+                    </Border>
+                </StackPanel>
+            </Grid>
+
+            <!-- Linha embaixo -->
+            <StackPanel Spacing="6">
+                <TextBlock Text="Evolução mensal do saldo" FontWeight="SemiBold"/>
+                <TextBlock Text="Mostra como seu saldo evoluiu ao longo dos meses" FontSize="12" Foreground="Gray"/>
+                <Border Padding="10" CornerRadius="6" Height="300">
+                    <lvc:CartesianChart Series="{Binding LineSeries}"
+                                        XAxes="{Binding XAxes}"
+                                        YAxes="{Binding YAxes}" />
+                </Border>
+            </StackPanel>
+        </StackPanel>
     </ScrollViewer>
 </UserControl>
