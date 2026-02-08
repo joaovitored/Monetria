@@ -10,26 +10,38 @@
     
         <StackPanel Spacing="10" Margin="10" Orientation="Vertical">
             
-            <TextBlock Text="Configurações" FontSize="20" FontWeight="Bold"></TextBlock>
+            <Border Background="{DynamicResource BackgroundColor}" Padding="12" CornerRadius="6">
+                <TextBlock Text="Configurações"
+                           Foreground="{DynamicResource ForegroundColor}"
+                           FontSize="20"
+                           FontWeight="Bold"/>
+            </Border>
+
         
             <Border Padding="12" CornerRadius="6" >
             <StackPanel Spacing="8">
                 
                 <TextBlock Text="Tema"/>
 
-        <StackPanel Orientation="Horizontal" Spacing="12">
-       <RadioButton GroupName="Tema" Content="Escuro" IsChecked="{Binding}"></RadioButton>
-        <RadioButton GroupName="Tema" Content="Claro" IsChecked="{Binding}"></RadioButton>
-            
-        </StackPanel> 
+                <RadioButton
+                    GroupName="Tema"
+                    Content="Escuro"
+                    IsChecked="{Binding TemaEscuro, Mode=TwoWay}" />
+
+                <RadioButton
+                    GroupName="Tema"
+                    Content="Claro"
+                    IsChecked="{Binding TemaClaro, Mode=TwoWay}" />
+
         <TextBlock Text="Dados"/>
 
-        <RepeatButton Command="{Binding ResetarDadosCommand}" Interval="1500" Delay="300">
-            <StackPanel Orientation="Horizontal" Spacing="6">
-                <PathIcon Data="{StaticResource arrow_sync_regular}" />
-                <TextBlock Text="Resetar dados" />
-            </StackPanel>
-        </RepeatButton>
+                <RepeatButton Command="{Binding ResetarDadosCommand}" Interval="1500" Delay="300">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <PathIcon Data="{StaticResource arrow_sync_regular}" />
+                        <TextBlock Text="Resetar dados" />
+                    </StackPanel>
+                </RepeatButton>
+
         
         <TextBlock Text="{Binding Message}" Foreground="{Binding MessageColor}" Margin="0,10"/>
                 

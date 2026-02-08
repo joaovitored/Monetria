@@ -6,19 +6,40 @@
              xmlns:vm="using:Monetria.ViewModels" 
              mc:Ignorable="d" x:Class="Monetria.Views.DashboardPageView"
              x:DataType="vm:DashboardPageViewModel">
-     <ScrollViewer>
-         
-         <StackPanel Spacing="10" Margin="10" Orientation="Vertical"> <TextBlock Text="Bem vindo ao Dashboard!" FontSize="20" FontWeight="Bold"/>
-              <TextBox BorderThickness="0" TextWrapping="Wrap">ASDKAKLDKALJDKLAJDLKAJDK</TextBox>
-              
-              <Grid RowDefinitions="Auto,*,*" Margin="10" RowSpacing="10">
-                   <!-- Gráfico de Pizza --> <lvc:PieChart Grid.Row="1"
-                                                           Height="420" Series="{Binding PieSeries}"
-                                                           LegendPosition="Left"/> <!-- Gráfico de Linha (DateTime) --> 
-                   <lvc:CartesianChart Grid.Row="2" Height="450" 
-                                       Series="{Binding LineSeries}"
-                                       HorizontalAlignment="Stretch"/>
-              </Grid>
-          </StackPanel>
-     </ScrollViewer>
+    
+    <ScrollViewer>
+        <StackPanel Spacing="15" Margin="10" Orientation="Vertical">
+
+            <TextBlock Text="Bem vindo ao Dashboard!" FontSize="20" FontWeight="Bold"/>
+            <TextBox BorderThickness="0" TextWrapping="Wrap">
+                ASDKAKLDKALJDKLAJDLKAJDK
+            </TextBox>
+
+            <!-- Gráfico de Pizza com borda arredondada -->
+            <Border CornerRadius="15" 
+                    BorderThickness="2" 
+                    BorderBrush="Black" 
+                    Background="Black"
+                    Padding="10"
+                    Margin="0,10,0,0">
+                <lvc:PieChart Series="{Binding PieSeries}" 
+                              LegendPosition="Left" 
+                              Height="420"/>
+            </Border>
+
+            <!-- Gráfico de Linha com borda arredondada -->
+            <Border CornerRadius="15" 
+                    BorderThickness="2" 
+                    BorderBrush="Black" 
+                    Background="Black"
+                    Padding="10"
+                    Margin="0,10,0,0">
+                <lvc:CartesianChart Series="{Binding LineSeries}"
+                                    XAxes="{Binding XAxes}"
+                                    YAxes="{Binding YAxes}"
+                                    Height="450"/>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

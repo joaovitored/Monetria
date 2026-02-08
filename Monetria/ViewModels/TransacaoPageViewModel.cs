@@ -63,7 +63,7 @@ public partial class TransacaoPageViewModel : ViewModelBase
             using var workbook = new XLWorkbook();
             var worksheet = workbook.Worksheets.Add("Transações");
 
-            // Cabeçalhos
+            // cabeçalho
             worksheet.Cell(1, 1).Value = "Data";
             worksheet.Cell(1, 2).Value = "Tipo";
             worksheet.Cell(1, 3).Value = "Categoria";

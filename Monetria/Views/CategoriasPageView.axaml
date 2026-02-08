@@ -1,22 +1,108 @@
 ﻿<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
              xmlns:vm="using:Monetria.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:models="using:Monetria.Models"
              x:Class="Monetria.Views.CategoriasPageView"
              x:DataType="vm:CategoriasPageViewModel">
-    
-    <StackPanel Spacing="10" Margin="10" Orientation="Vertical">
-    <TextBlock Text="Bem vindo a aba de categorias!" FontSize="20" FontWeight="Bold"></TextBlock>
-        <Grid>
-            <Button>+ Nova Categoria</Button>
-            
-        </Grid>
-        
-        <DataGrid  Margin="20" ItemsSource="{Binding Categorias }" AutoGenerateColumns="True"
-                   IsReadOnly="True" GridLinesVisibility="All" BorderThickness="1" BorderBrush="Chartreuse"
-                   CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True"></DataGrid>
+
+    <StackPanel Margin="10" Spacing="10">
+
+        <TextBlock Text="Categorias"
+                   FontSize="20"
+                   FontWeight="Bold"/>
+
+        <!--  Filtro -->
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBlock Text="Filtrar por tipo:"
+                       VerticalAlignment="Center"/>
+
+            <ComboBox Width="160"
+                      ItemsSource="{Binding TiposFiltro}"
+                      SelectedItem="{Binding FiltroTipo, Mode=TwoWay}" />
+        </StackPanel>
+
+        <!--  Grid das categorias -->
+        <DataGrid ItemsSource="{Binding Categorias}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  GridLinesVisibility="All"
+                  CanUserResizeColumns="True"
+                  CanUserSortColumns="True"
+                  RowDetailsVisibilityMode="VisibleWhenSelected">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Nome"
+                                    Binding="{Binding Nome}"
+                                    Width="*" />
+
+                <DataGridTextColumn Header="Tipo"
+                                    Binding="{Binding Tipo}"
+                                    Width="120"/>
+
+                
+                <DataGridTextColumn Header="Total"
+                                    Binding="{Binding TotalFormatado}"
+                                    Width="140"/>
+
+                <DataGridTemplateColumn Header="Cor" Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Border Width="14"
+                                    Height="14"
+                                    Background="{Binding Cor}"
+                                    CornerRadius="7"
+                                    HorizontalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+
+            <!-- Detalhes das transações -->
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate x:DataType="models:Categoria">
+
+                    <Border Margin="10"
+                            Padding="10"
+                            BorderThickness="1"
+                            BorderBrush="LightGray"
+                            CornerRadius="6">
+
+                        <DataGrid ItemsSource="{Binding Transacoes}"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  HeadersVisibility="Column"
+                                  GridLinesVisibility="Horizontal">
+
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn Header="Data"
+                                                    Binding="{Binding Data, StringFormat='{}{0:dd/MM/yyyy}'}"
+                                                    Width="120"/>
+
+                                <DataGridTextColumn Header="Tipo"
+                                                    Binding="{Binding Tipo}"
+                                                    Width="120"/>
+
+                                <DataGridTextColumn Header="Descrição"
+                                                    Binding="{Binding Descricao}"
+                                                    Width="*"/>
+
+                                <DataGridTextColumn Header="Valor"
+                                                    Binding="{Binding ValorFormatado}"
+                                                    Width="120"/>
+
+                            </DataGrid.Columns>
+
+                        </DataGrid>
+
+                    </Border>
+
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+
+        </DataGrid>
+
     </StackPanel>
 </UserControl>

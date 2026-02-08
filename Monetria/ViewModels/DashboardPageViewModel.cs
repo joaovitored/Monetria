@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Monetria.Models;
 using Monetria.Services;
@@ -12,18 +13,23 @@ namespace Monetria.ViewModels
     {
         private readonly TransacaoService _service;
 
-        // Gráficos
+        // gráficos
         public ObservableCollection<ISeries> PieSeries { get; } = new();
         public ObservableCollection<ISeries> LineSeries { get; } = new();
 
+        //eixos para gráfico de linha
+        public ObservableCollection<Axis> XAxes { get; } = new();
+        public ObservableCollection<Axis> YAxes { get; } = new();
+
+        //construtor obrigatório recebendo o serviço
         public DashboardPageViewModel(TransacaoService service)
         {
-            _service = service;
+            _service = service ?? throw new ArgumentNullException(nameof(service));
 
-            // Atualiza gráficos sempre que a coleção de transações muda
-            _service.Transacoes.CollectionChanged += (s, e) => AtualizarGraficos();
+            //atualiza gráficos sempre que a coleção de transações muda
+            _service.Transacoes.CollectionChanged += (_, _) => AtualizarGraficos();
 
-            // Atualiza gráficos na inicialização
+            //atualiza gráficos na inicialização
             AtualizarGraficos();
         }
 
@@ -37,7 +43,6 @@ namespace Monetria.ViewModels
         {
             PieSeries.Clear();
 
-            // Agrupa por categoria e soma os valores
             var grupos = _service.Transacoes
                 .GroupBy(t => t.Categoria)
                 .Select(g => new { Categoria = g.Key, Total = g.Sum(t => t.Valor) })
@@ -47,37 +52,56 @@ namespace Monetria.ViewModels
             {
                 PieSeries.Add(new PieSeries<double>
                 {
-                    Values = new double[] { (double)g.Total },
-                    Name = g.Categoria
+                    Name = g.Categoria,
+                    Values = new[] { (double)g.Total }
                 });
             }
 
-            // Adiciona item extra apenas para mostrar o total na legenda
+            // adiciona total apenas na legenda
             var total = _service.Transacoes.Sum(t => t.Valor);
             PieSeries.Add(new PieSeries<double>
             {
-                Values = new double[] { 0 }, // fatia zero, não aparece no gráfico
+                Values = new double[] { 0 },
                 Name = $"Total: R$ {total:N2}",
-                Fill = null,                // cor transparente
-                DataLabelsSize = 0,         // não mostra label no gráfico
-                IsVisible = true            // aparece na legenda
+                Fill = null,
+                DataLabelsSize = 0,
+                IsVisible = true
             });
         }
 
         private void AtualizarLine()
         {
             LineSeries.Clear();
+            XAxes.Clear();
+            YAxes.Clear();
 
-            // Converte a data em OADate para eixo X
-            var pontos = _service.Transacoes
+            //agrupa por mês e ano, mas sem acumular valores
+            var agrupado = _service.Transacoes
                 .OrderBy(t => t.Data)
-                .Select(t => new { X = t.Data.ToOADate(), Y = (double)t.Valor })
-                .ToArray();
+                .GroupBy(t => new { t.Data.Year, t.Data.Month })
+                .Select(g => new
+                {
+                    Ano = g.Key.Year,
+                    Mes = g.Key.Month,
+                    TotalMes = g.Sum(t => t.Tipo == "Receita" ? (double)t.Valor : -(double)t.Valor)
+                })
+                .ToList();
 
+            //valores para gráfico (apenas total do mês)
             LineSeries.Add(new LineSeries<double>
             {
-                Values = pontos.Select(p => p.Y).ToArray()
+                Values = agrupado.Select(a => a.TotalMes).ToArray(),
+                Name = "Evolução Mensal (R$)"
             });
+
+            //labels X (ex: Jan/2026)
+            XAxes.Add(new Axis
+            {
+                Labels = agrupado.Select(a => new DateTime(a.Ano, a.Mes, 1).ToString("MMM/yyyy")).ToArray()
+            });
+
+            //eixo Y automático
+            YAxes.Add(new Axis());
         }
     }
 }

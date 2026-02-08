@@ -6,6 +6,7 @@
 /.idea.Monetria.iml
 /contentModel.xml
 /modules.xml
+*.idea
 # Ignored default folder with query files
 /queries/
 # Datasource local storage ignored files

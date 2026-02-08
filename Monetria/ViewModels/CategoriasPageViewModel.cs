@@ -1,20 +1,63 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Monetria.Models;
+using Monetria.Services;
 
 namespace Monetria.ViewModels;
 
-public class CategoriasPageViewModel : ViewModelBase
+public partial class CategoriasPageViewModel : ViewModelBase
 {
-    public ObservableCollection<Categoria> Categorias { get; }
+    private readonly TransacaoService _transacaoService;
+
+    public ObservableCollection<Categoria> Categorias { get; } = new();
+
+    //filtro selecionado
+    [ObservableProperty]
+    private string _filtroTipo = "Todos";
+
+    //opções do combobox
+    public ObservableCollection<string> TiposFiltro { get; } =
+        new() { "Todos", "Receita", "Despesa" };
 
     public CategoriasPageViewModel()
     {
-        var categorias = new List<Categoria>
+        _transacaoService = AppServices.TransacaoService;
+
+        _transacaoService.Transacoes.CollectionChanged += (_, _) => Recarregar();
+
+        Recarregar();
+    }
+
+    partial void OnFiltroTipoChanged(string value)
+    {
+        Recarregar();
+    }
+
+    private void Recarregar()
+    {
+        Categorias.Clear();
+
+        var transacoes = _transacaoService.Transacoes.AsEnumerable();
+
+        if (FiltroTipo != "Todos")
+            transacoes = transacoes.Where(t => t.Tipo == FiltroTipo);
+
+        var grupos = transacoes
+            .GroupBy(t => t.Categoria)
+            .ToList();
+
+        foreach (var grupo in grupos)
         {
-            new Categoria("Marcelo", "Verde", "Finança", true)
-        };
-        Categorias = new ObservableCollection<Categoria>(categorias);
+            var tipo = grupo.First().Tipo;
+            var cor = tipo == "Despesa" ? "Red" : "Green";
+
+            var categoria = new Categoria(grupo.Key, tipo, cor);
+
+            foreach (var transacao in grupo)
+                categoria.Transacoes.Add(transacao);
+
+            Categorias.Add(categoria);
+        }
     }
 }

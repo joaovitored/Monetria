@@ -1,21 +1,27 @@
-﻿namespace Monetria.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.ObjectModel;
+using System.Linq;
 
-public class Categoria
+namespace Monetria.Models;
+
+public partial class Categoria : ObservableObject
 {
-    public string Nome { get; set; }
-    
-    public string Cor { get; set; }
-    
-    public string Tipo  { get; set; }
-    
-    public bool Acoes { get; set; }
+    [ObservableProperty] private string _nome;
+    [ObservableProperty] private string _tipo; // Receita / Despesa
+    [ObservableProperty] private string _cor;
 
-    public Categoria(string nome, string cor, string tipo, bool acoes)
+    // Transações ligadas a essa categoria
+    public ObservableCollection<Transacao> Transacoes { get; } = new();
+
+    // Total calculado automaticamente
+    public decimal Total => Transacoes.Sum(t => t.Valor);
+
+    public string TotalFormatado => $"R$ {Total:N2}";
+
+    public Categoria(string nome, string tipo, string cor)
     {
-        Nome = nome;
-        Cor = cor;
-        Tipo = tipo;
-        Acoes = acoes;
-
+        _nome = nome;
+        _tipo = tipo;
+        _cor = cor;
     }
 }

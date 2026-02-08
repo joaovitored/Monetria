@@ -1,102 +1,115 @@
 ﻿<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:vm="using:Monetria.ViewModels"
-             x:Class="Monetria.Views.TransacaoPageView"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:vm="using:Monetria.ViewModels" 
+             x:Class="Monetria.Views.TransacaoPageView" 
              x:DataType="vm:TransacaoPageViewModel">
-
-    <!-- Grid principal para layout responsivo -->
+    
+    <!-- Grid principal para layout responsivo --> 
     <Grid Margin="10" RowDefinitions="Auto,Auto,Auto,*" ColumnDefinitions="*">
-
-        <!-- Cabeçalho -->
-        <TextBlock Grid.Row="0"
-                   Text="Bem vindo a aba de transações!"
-                   FontSize="20"
-                   FontWeight="Bold"
-                   Margin="0,0,0,10"/>
-
-        <!-- Botões -->
-        <Grid Grid.Row="1" ColumnDefinitions="140,*" Margin="0,0,0,10">
-            <Button Grid.Column="0"
-                    Command="{Binding NovaTransacaoCommand}"
-                    Content="+ Nova Transação"
-                    Width="140"/>
-            <Button Grid.Column="1"
-                    Content="Exportar Excel"
-                    Command="{Binding ExportarExcelAsync}"
-                    Width="140"/>
-        </Grid>
-
-        <!-- Filtros (exemplo, você pode preencher) -->
-        <Grid Grid.Row="2" ColumnDefinitions="140,*,140,*,140,*" Margin="0,0,0,10">
-            <!-- Mês, Tipo e Categoria -->
-        </Grid>
-
-        <!-- DataGrid responsivo -->
-        <DataGrid Grid.Row="3"
-                  ItemsSource="{Binding Transacoes}"
-                  AutoGenerateColumns="False"
-                  IsReadOnly="False"
-                  GridLinesVisibility="All"
-                  BorderThickness="1"
-                  BorderBrush="Chartreuse"
-                  CanUserReorderColumns="True"
-                  CanUserResizeColumns="True"
-                  CanUserSortColumns="True"
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch">
-
-            <DataGrid.Columns>
-
-                <!-- Data -->
-                <DataGridTemplateColumn Header="Data" Width="120" SortMemberPath="Data">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
+         <!-- Cabeçalho --> <TextBlock Grid.Row="0" Text="Bem vindo a aba de transações!" 
+                           FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/> 
+         
+         <!-- Botões --> <Grid Grid.Row="1" 
+                               ColumnDefinitions="140,*"
+                               Margin="0,0,0,10">
+             <Button Grid.Column="0" 
+                     Command="{Binding NovaTransacaoCommand}"
+                     Content="+ Nova Transação" Width="140"/> 
+             
+             <Button Grid.Column="1" 
+                     Content="Exportar Excel" 
+                     Command="{Binding ExportarExcelAsync}" 
+                     Width="140"/>
+             
+         </Grid> 
+         
+         <!-- Filtros (exemplo, você pode preencher) --> 
+         <Grid Grid.Row="2"
+               ColumnDefinitions="140,*,140,*,140,*" 
+               Margin="0,0,0,10"> <!-- Mês, Tipo e Categoria --> 
+         </Grid>
+         <!-- DataGrid responsivo --> <DataGrid Grid.Row="3"
+                                                ItemsSource="{Binding Transacoes}"
+                                                AutoGenerateColumns="False" 
+                                                IsReadOnly="False"
+                                                GridLinesVisibility="All" 
+                                                BorderThickness="1" 
+                                                BorderBrush="Chartreuse" 
+                                                CanUserReorderColumns="True" 
+                                                CanUserResizeColumns="True"
+                                                CanUserSortColumns="True"
+                                                HorizontalAlignment="Stretch" 
+                                                VerticalAlignment="Stretch">
+             
+             <DataGrid.Columns> <!-- Data --> <DataGridTemplateColumn 
+                                                  Header="Data" 
+                                                  Width="120" 
+                                                  SortMemberPath="Data">
+                 
+                 <DataGridTemplateColumn.CellTemplate>
+                       <DataTemplate>
                             <CalendarDatePicker SelectedDate="{Binding Data, Mode=TwoWay}" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
-                <!-- Tipo -->
-                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo, Mode=TwoWay}" Width="*" />
-
-                <!-- Categoria -->
-                <DataGridTextColumn Header="Categoria" Binding="{Binding Categoria, Mode=TwoWay}" Width="*" />
-
-                <!-- Descrição -->
-                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao, Mode=TwoWay}" Width="2*" />
-
-                <!-- Valor com R$ e centralizado -->
-                <DataGridTemplateColumn Header="Valor" Width="100" SortMemberPath="Valor">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding ValorFormatado}" 
+                       </DataTemplate>
+                  </DataGridTemplateColumn.CellTemplate>
+                 
+             </DataGridTemplateColumn> <!-- Tipo -->
+                 <DataGridTextColumn Header="Tipo"
+                                     Binding="{Binding 
+                                     Tipo, Mode=TwoWay}"
+                                     Width="*" /> <!-- Categoria -->
+                 
+                 <DataGridTextColumn
+                     Header="Categoria"
+                     Binding="{Binding Categoria, Mode=TwoWay}"
+                     Width="*" /> <!-- Descrição --> 
+                 
+                 <DataGridTextColumn Header="Descrição"
+                                     Binding="{Binding Descricao, Mode=TwoWay}" 
+                                     Width="2*" /> <!-- Valor com R$ e centralizado --> 
+                 
+                 <DataGridTemplateColumn Header="Valor" 
+                                         Width="100" SortMemberPath="Valor">
+                     
+                      <DataGridTemplateColumn.CellTemplate>
+                           <DataTemplate>
+                            <TextBlock Text="{Binding ValorFormatado}"
                                        HorizontalAlignment="Center" 
                                        VerticalAlignment="Center"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                    <DataGridTemplateColumn.CellEditingTemplate>
-                        <DataTemplate>
-                            <TextBox Text="{Binding Valor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                                     HorizontalAlignment="Center" 
-                                     VerticalAlignment="Center"/>
-
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellEditingTemplate>
-                </DataGridTemplateColumn>
-
-                <!-- Ações -->
-                <DataGridTemplateColumn Header="Ações" Width="120">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="6">
-                                <Button Content="Excluir" Command="{Binding ExcluirCommand}" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
-            </DataGrid.Columns>
-        </DataGrid>
-
+                            
+                      </DataTemplate> 
+                           
+                      </DataGridTemplateColumn.CellTemplate> 
+                      <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                 
+                                 <TextBox Text="{Binding Valor,
+                                          Mode=TwoWay, 
+                                          UpdateSourceTrigger=LostFocus, 
+                                          TargetNullValue=0,StringFormat=N2}" 
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                                 
+                            </DataTemplate>
+                           
+                      </DataGridTemplateColumn.CellEditingTemplate>
+                 </DataGridTemplateColumn> 
+                 <!-- Ações --> <DataGridTemplateColumn Header="Ações"
+                                                        Width="120">
+                       
+                     <DataGridTemplateColumn.CellTemplate>
+                           <DataTemplate>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center" 
+                                            Spacing="6"> <Button Content="Excluir"
+                                                                 Command="{Binding ExcluirCommand}" /> 
+                                </StackPanel>
+                               
+                           </DataTemplate>
+                         
+                     </DataGridTemplateColumn.CellTemplate>
+                     
+                 </DataGridTemplateColumn> 
+             </DataGrid.Columns>
+         </DataGrid>
     </Grid>
 </UserControl>

@@ -10,19 +10,39 @@ public class TransacaoService
 {
     private const string ArquivoJson = "transacoes.json";
 
-    public ObservableCollection<Transacao> Transacoes { get; } = new ObservableCollection<Transacao>();
+    public ObservableCollection<Transacao> Transacoes { get; } = new();
 
     public TransacaoService()
     {
         Carregar();
-        Transacoes.CollectionChanged += (s, e) => Salvar();
+        Transacoes.CollectionChanged += (_, _) => Salvar();
     }
 
     public void AdicionarTransacao(Transacao t) => Transacoes.Add(t);
 
     public void RemoverTransacao(Transacao t)
     {
-        if (t != null) Transacoes.Remove(t);
+        if (t != null)
+            Transacoes.Remove(t);
+    }
+
+    public void ResetarTudo()
+    {
+        try
+        {
+            Transacoes.CollectionChanged -= (_, _) => Salvar();
+
+            Transacoes.Clear();
+
+            if (File.Exists(ArquivoJson))
+                File.Delete(ArquivoJson);
+
+            Transacoes.CollectionChanged += (_, _) => Salvar();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Erro ao resetar dados: " + ex.Message);
+        }
     }
 
     private void Salvar()
@@ -30,7 +50,7 @@ public class TransacaoService
         try
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize(Transacoes, options);
+            var json = JsonSerializer.Serialize(Transacoes, options);
             File.WriteAllText(ArquivoJson, json);
         }
         catch (Exception ex)
@@ -45,17 +65,17 @@ public class TransacaoService
         {
             if (!File.Exists(ArquivoJson)) return;
 
-            string json = File.ReadAllText(ArquivoJson);
+            var json = File.ReadAllText(ArquivoJson);
             var lista = JsonSerializer.Deserialize<ObservableCollection<Transacao>>(json);
 
-            if (lista != null)
+            if (lista == null) return;
+
+            foreach (var t in lista)
             {
-                foreach (var t in lista)
-                {
-                    // Inicializa o comando de exclusão após carregar do JSON
-                    t.ExcluirCommand = new CommunityToolkit.Mvvm.Input.RelayCommand(() => RemoverTransacao(t));
-                    Transacoes.Add(t);
-                }
+                t.ExcluirCommand =
+                    new CommunityToolkit.Mvvm.Input.RelayCommand(() => RemoverTransacao(t));
+
+                Transacoes.Add(t);
             }
         }
         catch (Exception ex)
