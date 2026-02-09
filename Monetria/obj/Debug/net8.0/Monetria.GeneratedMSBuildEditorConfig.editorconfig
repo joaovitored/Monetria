@@ -29,6 +29,30 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Styles/EstilosIcones.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Styles/Themes/Dark.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Styles/Themes/GreenDark.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Styles/Themes/GreenLight.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Styles/Themes/Light.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Styles/Themes/OrangeBlueDark.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Styles/Themes/OrangeBlueLight.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Styles/Themes/PurpleDark.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Styles/Themes/PurpleLight.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Joao Vitor/Documents/GitHub/Monetria/Monetria/Views/CategoriasPageView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

@@ -53,11 +53,11 @@
           }
         }
       },
-      "Avalonia/11.3.10": {
+      "Avalonia/11.3.11": {
         "type": "package",
         "dependencies": {
           "Avalonia.BuildServices": "11.3.2",
-          "Avalonia.Remote.Protocol": "11.3.10",
+          "Avalonia.Remote.Protocol": "11.3.11",
           "MicroCom.Runtime": "0.11.0"
         },
         "compile": {
@@ -165,12 +165,12 @@
           "Avalonia.Remote.Protocol": "11.3.10"
         },
         "compile": {
-          "lib/net8.0/Avalonia.Controls.ColorPicker.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Avalonia.Controls.ColorPicker.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         }
@@ -219,12 +219,12 @@
           "Avalonia.Themes.Simple": "11.3.10"
         },
         "compile": {
-          "lib/net8.0/Avalonia.Diagnostics.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Avalonia.Diagnostics.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         }
@@ -284,7 +284,7 @@
           }
         }
       },
-      "Avalonia.Remote.Protocol/11.3.10": {
+      "Avalonia.Remote.Protocol/11.3.11": {
         "type": "package",
         "compile": {
           "lib/net8.0/Avalonia.Remote.Protocol.dll": {
@@ -319,10 +319,10 @@
           }
         }
       },
-      "Avalonia.Themes.Fluent/11.3.10": {
+      "Avalonia.Themes.Fluent/11.3.11": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "11.3.10"
+          "Avalonia": "11.3.11"
         },
         "compile": {
           "lib/net8.0/Avalonia.Themes.Fluent.dll": {
@@ -341,12 +341,12 @@
           "Avalonia": "11.3.10"
         },
         "compile": {
-          "lib/net8.0/Avalonia.Themes.Simple.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Avalonia.Themes.Simple.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         }
@@ -390,6 +390,12 @@
           "lib/net8.0/Avalonia.X11.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "AvaloniaWASM.Storage/1.0.0": {
+        "type": "package",
+        "build": {
+          "build/AvaloniaWASM.Storage.targets": {}
         }
       },
       "ClosedXML/0.105.0": {
@@ -484,6 +490,15 @@
           "lib/netstandard2.0/ExcelNumberFormat.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "FluentTheme/0.5.0-beta": {
+        "type": "package",
+        "build": {
+          "buildTransitive/FluentTheme.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/FluentTheme.props": {}
         }
       },
       "HarfBuzzSharp/8.3.1.1": {
@@ -852,6 +867,758 @@
           "lib/net8.0/Tmds.DBus.Protocol.dll": {}
         }
       }
+    },
+    "net8.0/win-x64": {
+      "ActiproSoftware.Controls.Avalonia/25.2.2-beta.5": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.7"
+        },
+        "compile": {
+          "lib/net8.0/ActiproSoftware.Avalonia.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/ActiproSoftware.Avalonia.Shared.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ActiproSoftware.Avalonia.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/ActiproSoftware.Avalonia.Shared.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ActiproSoftware.Controls.Avalonia.Pro/25.2.2-beta.5": {
+        "type": "package",
+        "dependencies": {
+          "ActiproSoftware.Controls.Avalonia": "[25.2.2-beta.5]",
+          "Avalonia": "11.3.7"
+        },
+        "compile": {
+          "lib/net8.0/ActiproSoftware.Avalonia.Bars.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/ActiproSoftware.Avalonia.Docking.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/ActiproSoftware.Avalonia.Fundamentals.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ActiproSoftware.Avalonia.Bars.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/ActiproSoftware.Avalonia.Docking.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/ActiproSoftware.Avalonia.Fundamentals.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia/11.3.11": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia.BuildServices": "11.3.2",
+          "Avalonia.Remote.Protocol": "11.3.11",
+          "MicroCom.Runtime": "0.11.0"
+        },
+        "compile": {
+          "ref/net8.0/Avalonia.Base.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Controls.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.DesignerSupport.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Dialogs.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Markup.Xaml.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Markup.dll": {
+            "related": ".Xaml.xml;.xml"
+          },
+          "ref/net8.0/Avalonia.Metal.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.MicroCom.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.OpenGL.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Vulkan.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.dll": {
+            "related": ".Base.xml;.Controls.xml;.DesignerSupport.xml;.Dialogs.xml;.Markup.Xaml.xml;.Markup.xml;.Metal.xml;.MicroCom.xml;.OpenGL.xml;.Vulkan.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Base.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Controls.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.DesignerSupport.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Dialogs.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Markup.Xaml.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Markup.dll": {
+            "related": ".Xaml.xml;.xml"
+          },
+          "lib/net8.0/Avalonia.Metal.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.MicroCom.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.OpenGL.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Vulkan.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.dll": {
+            "related": ".Base.xml;.Controls.xml;.DesignerSupport.xml;.Dialogs.xml;.Markup.Xaml.xml;.Markup.xml;.Metal.xml;.MicroCom.xml;.OpenGL.xml;.Vulkan.xml;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Avalonia.props": {},
+          "buildTransitive/Avalonia.targets": {}
+        }
+      },
+      "Avalonia.Angle.Windows.Natives/2.1.25547.20250602": {
+        "type": "package",
+        "native": {
+          "runtimes/win-x64/native/av_libglesv2.dll": {}
+        }
+      },
+      "Avalonia.BuildServices/11.3.2": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Avalonia.BuildServices.targets": {}
+        }
+      },
+      "Avalonia.Controls.ColorPicker/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10",
+          "Avalonia.Remote.Protocol": "11.3.10"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Controls.DataGrid/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Controls.DataGrid.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Controls.DataGrid.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Desktop/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10",
+          "Avalonia.Native": "11.3.10",
+          "Avalonia.Skia": "11.3.10",
+          "Avalonia.Win32": "11.3.10",
+          "Avalonia.X11": "11.3.10"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Desktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Desktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Diagnostics/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10",
+          "Avalonia.Controls.ColorPicker": "11.3.10",
+          "Avalonia.Themes.Simple": "11.3.10"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Fonts.Inter/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Fonts.Inter.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Fonts.Inter.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.FreeDesktop/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10",
+          "Tmds.DBus.Protocol": "0.21.2"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.FreeDesktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.FreeDesktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Native/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Native.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Native.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Remote.Protocol/11.3.11": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Avalonia.Remote.Protocol.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Remote.Protocol.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Skia/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10",
+          "HarfBuzzSharp": "8.3.1.1",
+          "HarfBuzzSharp.NativeAssets.Linux": "8.3.1.1",
+          "HarfBuzzSharp.NativeAssets.WebAssembly": "8.3.1.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.NativeAssets.Linux": "2.88.9",
+          "SkiaSharp.NativeAssets.WebAssembly": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Skia.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Skia.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Themes.Fluent/11.3.11": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.11"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Themes.Fluent.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Themes.Fluent.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Themes.Simple/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Win32/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10",
+          "Avalonia.Angle.Windows.Natives": "2.1.25547.20250602"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Win32.Automation.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Win32.dll": {
+            "related": ".Automation.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Win32.Automation.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Win32.dll": {
+            "related": ".Automation.xml;.xml"
+          }
+        }
+      },
+      "Avalonia.X11/11.3.10": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.10",
+          "Avalonia.FreeDesktop": "11.3.10",
+          "Avalonia.Skia": "11.3.10"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.X11.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.X11.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AvaloniaWASM.Storage/1.0.0": {
+        "type": "package",
+        "build": {
+          "build/AvaloniaWASM.Storage.targets": {}
+        }
+      },
+      "ClosedXML/0.105.0": {
+        "type": "package",
+        "dependencies": {
+          "ClosedXML.Parser": "2.0.0",
+          "DocumentFormat.OpenXml": "[3.1.1, 4.0.0)",
+          "ExcelNumberFormat": "1.1.0",
+          "RBush.Signed": "4.0.0",
+          "SixLabors.Fonts": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/ClosedXML.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/ClosedXML.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "ClosedXML.Parser/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/ClosedXML.Parser.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/ClosedXML.Parser.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
+      "DocumentFormat.OpenXml/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "DocumentFormat.OpenXml.Framework": "3.1.1"
+        },
+        "compile": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DocumentFormat.OpenXml.Framework/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Packaging": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ExcelNumberFormat/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ExcelNumberFormat.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExcelNumberFormat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "FluentTheme/0.5.0-beta": {
+        "type": "package",
+        "build": {
+          "buildTransitive/FluentTheme.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/FluentTheme.props": {}
+        }
+      },
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1",
+          "HarfBuzzSharp.NativeAssets.macOS": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.macOS/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.WebAssembly/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.props": {},
+          "buildTransitive/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.targets": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {}
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Avalonia/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.0.0",
+          "Avalonia.Skia": "11.0.0",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1"
+        },
+        "compile": {
+          "lib/net8.0/LiveChartsCore.SkiaSharpView.Avalonia.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/LiveChartsCore.SkiaSharpView.Avalonia.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MicroCom.Runtime/0.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/MicroCom.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/MicroCom.Runtime.dll": {}
+        }
+      },
+      "RBush.Signed/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RBush.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/RBush.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SixLabors.Fonts/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.9",
+          "SkiaSharp.NativeAssets.macOS": "2.88.9"
+        },
+        "compile": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3",
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/net6.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.9": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.9"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.9": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.WebAssembly/2.88.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.props": {},
+          "buildTransitive/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.9": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/libSkiaSharp.dll": {}
+        }
+      },
+      "System.IO.Packaging/8.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Packaging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Packaging.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.IO.Pipelines/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Tmds.DBus.Protocol/0.21.2": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Tmds.DBus.Protocol.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Tmds.DBus.Protocol.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -891,10 +1658,10 @@
         "lib/net8.0/ActiproSoftware.Avalonia.Fundamentals.xml"
       ]
     },
-    "Avalonia/11.3.10": {
-      "sha512": "fAZmy1oOzQzBlg0Mm8QawA2439LmXHmX7hHEucfvGmAfibCUtQ0wgedl4b3XRd4Y8pH50kAlsg5DPG7ARtGa2A==",
+    "Avalonia/11.3.11": {
+      "sha512": "N+LjdoGLOD2Rio1JK0VlSMEB2opGZpq8/Vs5LV16eAnbjFeXdqY5uwmURFKb1rJ9McyMZQT3Kf2/DecmKqrLEw==",
       "type": "package",
-      "path": "avalonia/11.3.10",
+      "path": "avalonia/11.3.11",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -902,7 +1669,7 @@
         "Icon.png",
         "analyzers/dotnet/cs/Avalonia.Analyzers.dll",
         "analyzers/dotnet/cs/Avalonia.Generators.dll",
-        "avalonia.11.3.10.nupkg.sha512",
+        "avalonia.11.3.11.nupkg.sha512",
         "avalonia.nuspec",
         "build/Avalonia.Generators.props",
         "build/Avalonia.props",
@@ -1223,15 +1990,15 @@
         "runtimes/osx/native/libAvaloniaNative.dylib"
       ]
     },
-    "Avalonia.Remote.Protocol/11.3.10": {
-      "sha512": "DyNUbh9IfH+AL3KKob8p4IPZk7BvDMIB3ub13gJTrICfaMQiU7QsE0U05rfNFKJEdMmK0MBTL/Y+8BnaLVrDPw==",
+    "Avalonia.Remote.Protocol/11.3.11": {
+      "sha512": "kooZKlJb0DkzJYFzYTgChqAr+pOBq64FyNuvjpBLBmqTTTj/f+d7XyPvdNFgPsvyY3sa4X/W79t6hQnyWmM4zw==",
       "type": "package",
-      "path": "avalonia.remote.protocol/11.3.10",
+      "path": "avalonia.remote.protocol/11.3.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.remote.protocol.11.3.10.nupkg.sha512",
+        "avalonia.remote.protocol.11.3.11.nupkg.sha512",
         "avalonia.remote.protocol.nuspec",
         "lib/net6.0/Avalonia.Remote.Protocol.dll",
         "lib/net6.0/Avalonia.Remote.Protocol.xml",
@@ -1259,15 +2026,15 @@
         "lib/netstandard2.0/Avalonia.Skia.xml"
       ]
     },
-    "Avalonia.Themes.Fluent/11.3.10": {
-      "sha512": "K5QkJZYKbKUqLY9FbtSfihzO7n35cDcisQY9ohTfKBe/GQpmEqhy6BdazBDu8Iq/o7DfLUaNINbqCysvouiJIw==",
+    "Avalonia.Themes.Fluent/11.3.11": {
+      "sha512": "GBLwgTwLPGaWxtbBdZ+kUn+QIKVorTc3m8v3nr0wsvRJkWHPgrDR5LAoHJjkPQCLDFuqocYFIeLOUAaBYP0MeA==",
       "type": "package",
-      "path": "avalonia.themes.fluent/11.3.10",
+      "path": "avalonia.themes.fluent/11.3.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.themes.fluent.11.3.10.nupkg.sha512",
+        "avalonia.themes.fluent.11.3.11.nupkg.sha512",
         "avalonia.themes.fluent.nuspec",
         "lib/net6.0/Avalonia.Themes.Fluent.dll",
         "lib/net6.0/Avalonia.Themes.Fluent.xml",
@@ -1335,6 +2102,26 @@
         "lib/net8.0/Avalonia.X11.xml",
         "lib/netstandard2.0/Avalonia.X11.dll",
         "lib/netstandard2.0/Avalonia.X11.xml"
+      ]
+    },
+    "AvaloniaWASM.Storage/1.0.0": {
+      "sha512": "l6P3G2G85hrd02mn1K6a4++TfbGk/BYyHjdhK4roVPprnIHuMQxMaMm6tNKjHYNbIFokkcgkip7KYjt9bCpjhQ==",
+      "type": "package",
+      "path": "avaloniawasm.storage/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE",
+        "README_Nuget.md",
+        "avaloniawasm.storage.1.0.0.nupkg.sha512",
+        "avaloniawasm.storage.nuspec",
+        "build/AvaloniaWASM.Storage.targets",
+        "contentFiles/any/wwwroot/js/FuncIndexDB.js",
+        "contentFiles/any/wwwroot/js/FuncIndexedDbFile.js",
+        "contentFiles/any/wwwroot/js/FuncLocalStorage.js",
+        "contentFiles/any/wwwroot/js/FuncSessionStorage.js",
+        "lib/net9.0/AvaloniaWASM.Storage.dll"
       ]
     },
     "ClosedXML/0.105.0": {
@@ -1466,6 +2253,180 @@
         "lib/netstandard1.0/ExcelNumberFormat.xml",
         "lib/netstandard2.0/ExcelNumberFormat.dll",
         "lib/netstandard2.0/ExcelNumberFormat.xml"
+      ]
+    },
+    "FluentTheme/0.5.0-beta": {
+      "sha512": "G7R1tTu6EK9KTzxwEKH5P7P3XQijgXhX+oCNTX2AWSIPecX+/PCMDFqN91vP8ivhixdFDpA/yM1sMAUhdomtyQ==",
+      "type": "package",
+      "path": "fluenttheme/0.5.0-beta",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.md",
+        "build/FluentTheme.props",
+        "build/Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/FluentTheme.props",
+        "buildTransitive/FluentTheme.props",
+        "content/FluentTheme.Web.abppkg",
+        "content/FluentTheme.Web.abppkg.analyze.json",
+        "contentFiles/any/net9.0/FluentTheme.Web.abppkg.analyze.json",
+        "fluenttheme.0.5.0-beta.nupkg.sha512",
+        "fluenttheme.nuspec",
+        "lib/net9.0/FluentTheme.dll",
+        "lib/net9.0/FluentTheme.pdb",
+        "lib/net9.0/FluentTheme.xml",
+        "staticwebassets/FluentTheme.fvg6rbn98g.bundle.scp.css",
+        "staticwebassets/Themes/Fluent/MainLayout.razor.js",
+        "staticwebassets/libs/Fluent/theme.css",
+        "staticwebassets/libs/abp/css/theme.css",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker.css",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker.css.map",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css.map",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker.standalone.min.css",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker3.css",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker3.css.map",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker3.min.css",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css.map",
+        "staticwebassets/libs/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css",
+        "staticwebassets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js",
+        "staticwebassets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker-en-CA.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ar-tn.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ar.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.az.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.bg.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.bm.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.bn.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.br.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.bs.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ca.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.cs.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.cy.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.da.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.de.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.el.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-AU.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-CA.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-IE.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-NZ.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.en-ZA.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.eo.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.et.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.eu.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fa.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fi.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fo.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fr-CH.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.gl.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.he.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.hi.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.hr.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.hu.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.hy.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.id.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.is.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.it-CH.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.it.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ja.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ka.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.kh.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.kk.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.km.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ko.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.kr.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.lt.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.lv.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.me.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.mk.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.mn.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ms.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.nl-BE.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.no.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.oc.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.pl.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.pt.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ro.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.rs.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ru.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.si.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sk.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sl.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sq.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sr-latin.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sr.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sv.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.sw.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.ta.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.tg.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.th.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.tk.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.tr.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.uk.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.uz-cyrl.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.uz-latn.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js",
+        "staticwebassets/libs/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.min.js",
+        "staticwebassets/libs/bootstrap/css/bootstrap-grid.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-grid.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-grid.min.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-grid.min.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-grid.rtl.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-grid.rtl.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-grid.rtl.min.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-grid.rtl.min.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-reboot.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-reboot.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-reboot.min.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-reboot.min.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-reboot.rtl.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-reboot.rtl.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-reboot.rtl.min.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-reboot.rtl.min.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-utilities.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-utilities.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-utilities.min.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-utilities.min.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-utilities.rtl.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-utilities.rtl.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap-utilities.rtl.min.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap-utilities.rtl.min.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap.min.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap.min.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap.rtl.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap.rtl.css.map",
+        "staticwebassets/libs/bootstrap/css/bootstrap.rtl.min.css",
+        "staticwebassets/libs/bootstrap/css/bootstrap.rtl.min.css.map",
+        "staticwebassets/libs/bootstrap/js/bootstrap.bundle.js",
+        "staticwebassets/libs/bootstrap/js/bootstrap.bundle.js.map",
+        "staticwebassets/libs/bootstrap/js/bootstrap.bundle.min.js",
+        "staticwebassets/libs/bootstrap/js/bootstrap.bundle.min.js.map",
+        "staticwebassets/libs/bootstrap/js/bootstrap.esm.js",
+        "staticwebassets/libs/bootstrap/js/bootstrap.esm.js.map",
+        "staticwebassets/libs/bootstrap/js/bootstrap.esm.min.js",
+        "staticwebassets/libs/bootstrap/js/bootstrap.esm.min.js.map",
+        "staticwebassets/libs/bootstrap/js/bootstrap.js",
+        "staticwebassets/libs/bootstrap/js/bootstrap.js.map",
+        "staticwebassets/libs/bootstrap/js/bootstrap.min.js",
+        "staticwebassets/libs/bootstrap/js/bootstrap.min.js.map",
+        "staticwebassets/libs/jquery/jquery.js",
+        "staticwebassets/libs/jquery/jquery.min.js",
+        "staticwebassets/libs/jquery/jquery.min.map",
+        "staticwebassets/libs/jquery/jquery.slim.js",
+        "staticwebassets/libs/jquery/jquery.slim.min.js",
+        "staticwebassets/libs/jquery/jquery.slim.min.map"
       ]
     },
     "HarfBuzzSharp/8.3.1.1": {
@@ -2040,14 +3001,16 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "ActiproSoftware.Controls.Avalonia.Pro >= 25.2.2-beta.5",
-      "Avalonia >= 11.3.10",
+      "Avalonia >= 11.3.11",
       "Avalonia.Controls.DataGrid >= 11.3.10",
       "Avalonia.Desktop >= 11.3.10",
       "Avalonia.Diagnostics >= 11.3.10",
       "Avalonia.Fonts.Inter >= 11.3.10",
-      "Avalonia.Themes.Fluent >= 11.3.10",
+      "Avalonia.Themes.Fluent >= 11.3.11",
+      "AvaloniaWASM.Storage >= 1.0.0",
       "ClosedXML >= 0.105.0",
       "CommunityToolkit.Mvvm >= 8.2.1",
+      "FluentTheme >= 0.5.0-beta",
       "LiveChartsCore >= 2.0.0-rc6.1",
       "LiveChartsCore.SkiaSharpView >= 2.0.0-rc6.1",
       "LiveChartsCore.SkiaSharpView.Avalonia >= 2.0.0-rc6.1"
@@ -2109,7 +3072,7 @@
           },
           "Avalonia": {
             "target": "Package",
-            "version": "[11.3.10, )"
+            "version": "[11.3.11, )"
           },
           "Avalonia.Controls.DataGrid": {
             "target": "Package",
@@ -2120,6 +3083,8 @@
             "version": "[11.3.10, )"
           },
           "Avalonia.Diagnostics": {
+            "include": "None",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[11.3.10, )"
           },
@@ -2129,7 +3094,11 @@
           },
           "Avalonia.Themes.Fluent": {
             "target": "Package",
-            "version": "[11.3.10, )"
+            "version": "[11.3.11, )"
+          },
+          "AvaloniaWASM.Storage": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           },
           "ClosedXML": {
             "target": "Package",
@@ -2138,6 +3107,10 @@
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"
+          },
+          "FluentTheme": {
+            "target": "Package",
+            "version": "[0.5.0-beta, )"
           },
           "LiveChartsCore": {
             "target": "Package",
@@ -2163,30 +3136,17 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.23, 8.0.23]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.23, 8.0.23]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.23, 8.0.23]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.23, 8.0.23]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }

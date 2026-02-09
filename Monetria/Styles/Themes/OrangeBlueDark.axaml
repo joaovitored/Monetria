@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="BackgroundColor">#FF2F7BAD</Color>
+    <Color x:Key="ForegroundColor">#FFFFFFFF</Color>
+    <Color x:Key="AccentColor">#FFCC4D11</Color>
+    <Color x:Key="ChartBackground">#FF134B82</Color>
+    <Color x:Key="ChartBorder">#FF8DBFDF</Color>
+
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{DynamicResource BackgroundColor}"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{DynamicResource ForegroundColor}"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="{DynamicResource AccentColor}"/>
+    <SolidColorBrush x:Key="ChartBackgroundBrush" Color="{DynamicResource ChartBackground}"/>
+    <SolidColorBrush x:Key="ChartBorderBrush" Color="{DynamicResource ChartBorder}"/>
+</ResourceDictionary>

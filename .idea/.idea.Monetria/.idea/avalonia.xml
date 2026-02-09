@@ -7,6 +7,16 @@
         <entry key="Monetria/Styles/DataGrid.axaml" value="Monetria/Monetria.csproj" />
         <entry key="Monetria/Styles/EstilosIcones.axaml" value="Monetria/Monetria.csproj" />
         <entry key="Monetria/Styles/FundoAplicativo.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/PaletaCores.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/Themes/Dark.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/Themes/GreenDark.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/Themes/GreenLight.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/Themes/Light.axaml.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/Themes/OrangeBlueDark.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/Themes/OrangeBlueLight.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/Themes/Purple/PurpleLight.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/Themes/PurpleDark.axaml" value="Monetria/Monetria.csproj" />
+        <entry key="Monetria/Styles/Themes/PurpleLight.axaml" value="Monetria/Monetria.csproj" />
         <entry key="Monetria/Views/AvatarPage.axaml" value="Monetria/Monetria.csproj" />
         <entry key="Monetria/Views/CategoriasPageView.axaml" value="Monetria/Monetria.csproj" />
         <entry key="Monetria/Views/ConfiguracoesPageView.axaml" value="Monetria/Monetria.csproj" />

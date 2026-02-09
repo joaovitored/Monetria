@@ -3,74 +3,118 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:Monetria.ViewModels"
-             xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
              x:Class="Monetria.Views.ConfiguracoesPageView"
              x:DataType="vm:ConfiguracoesPageViewModel">
-    
-        <StackPanel Spacing="10" Margin="10" Orientation="Vertical">
-            
-            <Border Background="{DynamicResource BackgroundColor}" Padding="12" CornerRadius="6">
-                <TextBlock Text="Configurações"
-                           Foreground="{DynamicResource ForegroundColor}"
-                           FontSize="20"
-                           FontWeight="Bold"/>
-            </Border>
 
-        
-            <Border Padding="12" CornerRadius="6" >
-            <StackPanel Spacing="8">
-                
-                <TextBlock Text="Tema"/>
+    <StackPanel Spacing="12" Margin="12">
 
-                <RadioButton
-                    GroupName="Tema"
-                    Content="Escuro"
-                    IsChecked="{Binding TemaEscuro, Mode=TwoWay}" />
+        <!-- TÍTULO -->
+        <TextBlock Text="Configurações"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Margin="4"/>
 
-                <RadioButton
-                    GroupName="Tema"
-                    Content="Claro"
-                    IsChecked="{Binding TemaClaro, Mode=TwoWay}" />
+        <!-- CARD: TEMA -->
+        <Border Padding="14"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="#1F000000"
+                Background="{DynamicResource BackgroundColor}">
 
-        <TextBlock Text="Dados"/>
+            <Grid ColumnDefinitions="Auto,*,Auto"
+                  ColumnSpacing="12"
+                  VerticalAlignment="Center">
 
-                <RepeatButton Command="{Binding ResetarDadosCommand}" Interval="1500" Delay="300">
+                <!-- ÍCONE -->
+                <Border Width="32"
+                        Height="32"
+                        CornerRadius="16"
+                        Background="#14000000"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+                    <PathIcon Data="{StaticResource theme_icon}"
+                              Width="16"
+                              Height="16"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"/>
+                </Border>
+
+                <!-- TEXTO -->
+                <StackPanel Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Spacing="2">
+
+                    <TextBlock Text="Tema"
+                               FontSize="14"
+                               FontWeight="SemiBold"/>
+
+                    <TextBlock Text="Escolha entre sistema, claro ou escuro"
+                               FontSize="12"
+                               Opacity="0.6"/>
+                </StackPanel>
+
+                <!-- COMBO -->
+                <ComboBox Grid.Column="2"
+                          Width="140"
+                          VerticalAlignment="Center"
+                          SelectedItem="{Binding CurrentAppTheme}"
+                          ItemsSource="{Binding AppThemes}"/>
+            </Grid>
+        </Border>
+
+        <!-- CARD: DADOS -->
+        <Border Padding="14"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="#1F000000"
+                Background="{DynamicResource BackgroundColor}">
+
+            <StackPanel Spacing="10">
+
+                <TextBlock Text="Dados"
+                           FontSize="14"
+                           FontWeight="SemiBold"/>
+
+                <RepeatButton Command="{Binding ResetarDadosCommand}"
+                              Interval="1500"
+                              Delay="300">
+
                     <StackPanel Orientation="Horizontal" Spacing="6">
                         <PathIcon Data="{StaticResource arrow_sync_regular}" />
                         <TextBlock Text="Resetar dados" />
                     </StackPanel>
                 </RepeatButton>
 
-        
-        <TextBlock Text="{Binding Message}" Foreground="{Binding MessageColor}" Margin="0,10"/>
-                
-                        <TextBlock Margin="0 0" xml:space="preserve"><TextBlock Text="Informações:" FontSize="15" FontWeight="Bold"/>
-
-Monetria
-
-Versão: 1.0.0.0
-
-Desenvolvedor: Vitored/JoãoVitor.    
-  
-Repositório: <HyperlinkButton Margin="0,0,0,-10" Content="Meu github" NavigateUri="https://github.com/joaovitored"/>
-
-
-
-</TextBlock>
-                
-                
-
-
-        </StackPanel>
-         </Border>
-        
-        
-        
+                <TextBlock Text="{Binding Message}"
+                           Foreground="{Binding MessageColor}"/>
             </StackPanel>
-    
-        
-    
-   
+        </Border>
 
+        <!-- CARD: INFORMAÇÕES -->
+        <Border Padding="14"
+                CornerRadius="8"
+                BorderThickness="1"
+                BorderBrush="#1F000000"
+                Background="{DynamicResource BackgroundColor}">
+
+            <StackPanel Spacing="6">
+
+                <TextBlock Text="Informações"
+                           FontSize="14"
+                           FontWeight="SemiBold"/>
+
+                <TextBlock Text="Monetria"/>
+                <TextBlock Text="Versão: 1.0.0.0"/>
+                <TextBlock Text="Desenvolvedor: Vitored / João Vitor"/>
+
+                <HyperlinkButton Content="Meu GitHub"
+                                 NavigateUri="https://github.com/joaovitored"/>
+            </StackPanel>
+        </Border>
+
+    </StackPanel>
 </UserControl>

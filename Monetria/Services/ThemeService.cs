@@ -8,9 +8,6 @@ public class ThemeService
 {
     private const string ArquivoJson = "tema.json";
 
- 
-    //tema atual do aplicativo
- 
     public ThemeVariant TemaAtual { get; private set; } = ThemeVariant.Light;
 
     public ThemeService()
@@ -19,19 +16,10 @@ public class ThemeService
         AplicarTema();
     }
 
-   
-    // define o tema claro
-    
     public void DefinirClaro() => DefinirTema(ThemeVariant.Light);
-
- 
-    //define o tema escuro
-  
     public void DefinirEscuro() => DefinirTema(ThemeVariant.Dark);
+    public void DefinirSystem() => DefinirTema(ThemeVariant.Default);
 
-    
-    //aplica o tema na aplicação e salva
-    
     private void DefinirTema(ThemeVariant tema)
     {
         TemaAtual = tema;
@@ -39,40 +27,27 @@ public class ThemeService
         Salvar();
     }
 
-  
-    //aplica o tema no Application.Current
-
     private void AplicarTema()
     {
         if (Application.Current != null)
-        {
             Application.Current.RequestedThemeVariant = TemaAtual;
-        }
     }
 
-
-    //salva apenas a Key do tema no arquivo
-   
     private void Salvar()
     {
-        // converte pra string
-        File.WriteAllText(ArquivoJson, TemaAtual.Key?.ToString() ?? "Light");
+        File.WriteAllText(ArquivoJson, TemaAtual.ToString());
     }
 
-   
-    //carrega o tema salvo
-  
     private void Carregar()
     {
-        if (!File.Exists(ArquivoJson))
-            return;
+        if (!File.Exists(ArquivoJson)) return;
 
         var key = File.ReadAllText(ArquivoJson);
-
         TemaAtual = key switch
         {
             "Dark" => ThemeVariant.Dark,
             "Light" => ThemeVariant.Light,
+            "Default" => ThemeVariant.Default,
             _ => ThemeVariant.Light
         };
     }

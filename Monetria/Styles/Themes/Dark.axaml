@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:fluent="clr-namespace:Avalonia.Themes.Fluent;assembly=Avalonia.Themes.Fluent">
+
+    <fluent:ColorPaletteResources x:Key="Dark"
+                                  Accent="#ff0073cf"
+                                  AltHigh="Black"
+                                  AltLow="#FF1A1A1A"
+                                  BaseHigh="White"
+                                  BaseLow="#ff333333"
+                                  ListLow="#FF1D1D1D"
+                                  RegionColor="Black"/>
+</ResourceDictionary>

@@ -1,0 +1,146 @@
+[
+  {
+    "Selecionar": false,
+    "Data": "2019-02-01T00:00:00",
+    "Tipo": "Receita",
+    "Categoria": "Alimenta\u00E7\u00E3o",
+    "Descricao": "Sal\u00E1rio",
+    "Valor": 3000
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-01-06T12:30:00-03:00",
+    "Tipo": "Despesa",
+    "Categoria": "Alimenta\u00E7\u00E3o",
+    "Descricao": "Supermercado",
+    "Valor": 200
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-01-10T15:00:00-03:00",
+    "Tipo": "Despesa",
+    "Categoria": "Transporte",
+    "Descricao": "Combust\u00EDvel",
+    "Valor": 150
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-01-20T18:00:00-03:00",
+    "Tipo": "Receita",
+    "Categoria": "Freelance",
+    "Descricao": "Projeto de design",
+    "Valor": 1200
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-01-25T08:30:00-03:00",
+    "Tipo": "Despesa",
+    "Categoria": "Alimenta\u00E7\u00E3o",
+    "Descricao": "Restaurante",
+    "Valor": 80
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-02-01T10:13:36-03:00",
+    "Tipo": "Receita",
+    "Categoria": "",
+    "Descricao": "Freelance",
+    "Valor": 2050
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-02-01T10:00:00-03:00",
+    "Tipo": "Despesa",
+    "Categoria": "Alimenta\u00E7\u00E3o",
+    "Descricao": "Restaurante",
+    "Valor": 50
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-02-02T14:00:00-03:00",
+    "Tipo": "Receita",
+    "Categoria": "Freelance",
+    "Descricao": "Consultoria web",
+    "Valor": 1800
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-02-04T09:30:00-03:00",
+    "Tipo": "Despesa",
+    "Categoria": "Transporte",
+    "Descricao": "Uber",
+    "Valor": 70
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-02-06T11:45:00-03:00",
+    "Tipo": "Despesa",
+    "Categoria": "Sa\u00FAde",
+    "Descricao": "Medicamento",
+    "Valor": 120
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-02-10T17:00:00-03:00",
+    "Tipo": "Receita",
+    "Categoria": "Investimentos",
+    "Descricao": "Dividendos",
+    "Valor": 500
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-03-01T13:00:00-03:00",
+    "Tipo": "Receita",
+    "Categoria": "",
+    "Descricao": "Venda de produto",
+    "Valor": 400
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-03-03T09:15:00-03:00",
+    "Tipo": "Despesa",
+    "Categoria": "Transporte",
+    "Descricao": "Gasolina",
+    "Valor": 100
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-03-10T10:00:00-03:00",
+    "Tipo": "Despesa",
+    "Categoria": "Sa\u00FAde",
+    "Descricao": "Consulta m\u00E9dica",
+    "Valor": 150
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-03-15T18:00:00-03:00",
+    "Tipo": "Receita",
+    "Categoria": "",
+    "Descricao": "Comiss\u00F5es",
+    "Valor": 800
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-03-20T12:30:00-03:00",
+    "Tipo": "Despesa",
+    "Categoria": "Alimenta\u00E7\u00E3o",
+    "Descricao": "Jantar",
+    "Valor": 60
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-03-25T09:00:00-03:00",
+    "Tipo": "Receita",
+    "Categoria": "Investimentos",
+    "Descricao": "Juros de poupan\u00E7a",
+    "Valor": 120
+  },
+  {
+    "Selecionar": false,
+    "Data": "2026-02-03T18:24:05.0918159-03:00",
+    "Tipo": "",
+    "Categoria": "",
+    "Descricao": "",
+    "Valor": 0
+  }
+]

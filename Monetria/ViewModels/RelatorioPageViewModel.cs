@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Monetria.Models;
+﻿using Monetria.Models;
 using Monetria.Services;
 using System;
 using System.Collections.Generic;
@@ -24,7 +23,7 @@ namespace Monetria.ViewModels
         public ObservableCollection<Axis> YAxes { get; } = new();
 
         // Filtros
-        private string _mesSelecionado;
+        private string _mesSelecionado = string.Empty; // Inicialização com string vazia
         private int _anoSelecionado;
 
         // Listas de meses e anos disponíveis
@@ -52,7 +51,6 @@ namespace Monetria.ViewModels
         }
 
         // Construtor
-        // Construtor
         public RelatorioPageViewModel()
         {
             _service = AppServices.TransacaoService;
@@ -70,7 +68,6 @@ namespace Monetria.ViewModels
             if (AnosDisponiveis.Any())
                 AnoSelecionado = DateTime.Now.Year;
         }
-
 
         // Carregar meses e anos únicos com base nas transações
         private void CarregarMesesEAno()
@@ -103,7 +100,6 @@ namespace Monetria.ViewModels
             if (AnosDisponiveis.Any())
                 AnoSelecionado = AnosDisponiveis.First();
         }
-
 
         // Filtra as transações com base no mês e ano selecionado
         private void FiltrarTransacoes()

@@ -56,7 +56,7 @@
             },
             "Avalonia": {
               "target": "Package",
-              "version": "[11.3.10, )"
+              "version": "[11.3.11, )"
             },
             "Avalonia.Controls.DataGrid": {
               "target": "Package",
@@ -67,6 +67,8 @@
               "version": "[11.3.10, )"
             },
             "Avalonia.Diagnostics": {
+              "include": "None",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[11.3.10, )"
             },
@@ -76,7 +78,11 @@
             },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
-              "version": "[11.3.10, )"
+              "version": "[11.3.11, )"
+            },
+            "AvaloniaWASM.Storage": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             },
             "ClosedXML": {
               "target": "Package",
@@ -85,6 +91,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "FluentTheme": {
+              "target": "Package",
+              "version": "[0.5.0-beta, )"
             },
             "LiveChartsCore": {
               "target": "Package",
@@ -110,30 +120,17 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.23, 8.0.23]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.23, 8.0.23]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.23, 8.0.23]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.23, 8.0.23]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
         }
       }
     }

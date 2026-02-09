@@ -1,10 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Avalonia.Media;
 using Avalonia.Styling;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Monetria.Services;
-using System;
 
 namespace Monetria.ViewModels;
 
@@ -13,13 +13,13 @@ public partial class ConfiguracoesPageViewModel : ViewModelBase
     private readonly TransacaoService _transacaoService;
     private readonly ThemeService _themeService;
 
-    private int _clickCount = 0;
+    private int _clickCount;
+
+    public IReadOnlyList<AppTheme> AppThemes { get; } =
+        new[] { AppTheme.System, AppTheme.Light, AppTheme.Dark };
 
     [ObservableProperty]
-    private bool temaEscuro;
-
-    [ObservableProperty]
-    private bool temaClaro;
+    private AppTheme currentAppTheme;
 
     [ObservableProperty]
     private string message = "Clique 3 vezes para resetar os dados";
@@ -34,29 +34,33 @@ public partial class ConfiguracoesPageViewModel : ViewModelBase
         _transacaoService = transacaoService;
         _themeService = themeService;
 
-        //marca os RadioButtons de acordo com o tema carregado
-        TemaEscuro = _themeService.TemaAtual.Key?.ToString() == ThemeVariant.Dark.Key?.ToString();
-        TemaClaro  = _themeService.TemaAtual.Key?.ToString() == ThemeVariant.Light.Key?.ToString();
+        var tema = themeService.TemaAtual;
+
+        if (tema == ThemeVariant.Dark)
+            CurrentAppTheme = AppTheme.Dark;
+        else if (tema == ThemeVariant.Light)
+            CurrentAppTheme = AppTheme.Light;
+        else
+            CurrentAppTheme = AppTheme.System;
     }
 
-
-
-    partial void OnTemaEscuroChanged(bool value)
+    partial void OnCurrentAppThemeChanged(AppTheme value)
     {
-        if (!value) return;
+        switch (value)
+        {
+            case AppTheme.Dark:
+                _themeService.DefinirEscuro();
+                break;
 
-        Console.WriteLine("Tema escuro selecionado");
-        _themeService.DefinirEscuro();
+            case AppTheme.Light:
+                _themeService.DefinirClaro();
+                break;
+
+            case AppTheme.System:
+                _themeService.DefinirSystem();
+                break;
+        }
     }
-
-    partial void OnTemaClaroChanged(bool value)
-    {
-        if (!value) return;
-
-        Console.WriteLine("Tema claro selecionado");
-        _themeService.DefinirClaro();
-    }
-
 
     [RelayCommand]
     private async Task ResetarDados()
