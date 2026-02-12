@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pwCzIS0jTD8=",
+  "dgSpecHash": "sBmGTff/wkU=",
   "success": true,
   "projectFilePath": "C:\\Users\\Joao Vitor\\Documents\\GitHub\\Monetria\\Monetria\\Monetria.csproj",
   "expectedPackageFiles": [
@@ -29,7 +29,6 @@
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\documentformat.openxml\\3.1.1\\documentformat.openxml.3.1.1.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\documentformat.openxml.framework\\3.1.1\\documentformat.openxml.framework.3.1.1.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\excelnumberformat\\1.1.0\\excelnumberformat.1.1.0.nupkg.sha512",
-    "C:\\Users\\Joao Vitor\\.nuget\\packages\\fluenttheme\\0.5.0-beta\\fluenttheme.0.5.0-beta.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\harfbuzzsharp\\8.3.1.1\\harfbuzzsharp.8.3.1.1.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\8.3.1.1\\harfbuzzsharp.nativeassets.linux.8.3.1.1.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\8.3.1.1\\harfbuzzsharp.nativeassets.macos.8.3.1.1.nupkg.sha512",

@@ -4,41 +4,84 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
              xmlns:vm="using:Monetria.ViewModels" 
-             mc:Ignorable="d" x:Class="Monetria.Views.DashboardPageView"
+             mc:Ignorable="d"
+             x:Class="Monetria.Views.DashboardPageView"
              x:DataType="vm:DashboardPageViewModel">
     
     <ScrollViewer>
-        <StackPanel Spacing="15" Margin="10" Orientation="Vertical">
+        <StackPanel Spacing="16" Margin="16">
 
-            <TextBlock Text="Bem vindo ao Dashboard!" FontSize="20" FontWeight="Bold"/>
-            <TextBox BorderThickness="0" TextWrapping="Wrap">
-                ASDKAKLDKALJDKLAJDLKAJDK
-            </TextBox>
+            <!-- Cabeçalho -->
+            <StackPanel Spacing="6">
+                <TextBlock Text="Bem vindo ao Dashboard!"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"/>
 
-            <!-- Gráfico de Pizza com borda arredondada -->
-            <Border CornerRadius="15" 
-                    BorderThickness="2" 
-                    BorderBrush="Black" 
-                    Background="Black"
-                    Padding="10"
-                    Margin="0,10,0,0">
-                <lvc:PieChart Series="{Binding PieSeries}" 
-                              LegendPosition="Left" 
-                              Height="420"/>
-            </Border>
+                <TextBlock Text="Aqui será onde você poderá ver o resumo de seus ganhos e gastos"
+                           FontWeight="SemiBold"
+                           TextWrapping="Wrap"/>
+            </StackPanel>
 
-            <!-- Gráfico de Linha com borda arredondada -->
-            <Border CornerRadius="15" 
-                    BorderThickness="2" 
-                    BorderBrush="Black" 
-                    Background="Black"
-                    Padding="10"
-                    Margin="0,10,0,0">
-                <lvc:CartesianChart Series="{Binding LineSeries}"
-                                    XAxes="{Binding XAxes}"
-                                    YAxes="{Binding YAxes}"
-                                    Height="450"/>
-            </Border>
+            <!-- Seção Pizza -->
+            <StackPanel Spacing="6">
+
+                <TextBlock Text="Distribuição geral"
+                           FontWeight="SemiBold"
+                           TextWrapping="Wrap"
+                           Margin="5,24,0,0"/>
+
+                <TextBlock Text="Resumo visual das suas receitas e despesas"
+                           FontSize="12"
+                           Foreground="Gray"
+                           TextWrapping="Wrap"
+                           Margin="5,4,0,0"/>
+
+                <Border CornerRadius="15" 
+                        BorderThickness="2" 
+                        BorderBrush="{DynamicResource SystemAltMediumHighColor}"
+                        Background="{DynamicResource SystemAltHighColor}"
+                        Padding="10"
+                        Margin="0,10,0,0">
+
+                    <lvc:PieChart Series="{Binding PieSeries}" 
+                                  LegendPosition="Left" 
+                                  BorderBrush="{DynamicResource SystemAltMediumHighColor}"
+                                  Height="420"/>
+
+                </Border>
+
+            </StackPanel>
+
+            <!-- Seção Linha -->
+            <StackPanel Spacing="6">
+
+                <TextBlock Text="Evolução anual do saldo"
+                           FontWeight="SemiBold"
+                           TextWrapping="Wrap"
+                           Margin="5,14,0,0"/>
+
+                <TextBlock Text="Mostra como seus ganhos evoluíram ao longo dos anos"
+                           FontSize="12"
+                           Foreground="Gray"
+                           TextWrapping="Wrap"
+                           Margin="5,4,0,0"/>
+
+                <Border CornerRadius="15" 
+                        BorderThickness="2" 
+                        BorderBrush="{DynamicResource SystemAltMediumHighColor}"
+                        Background="{DynamicResource SystemAltHighColor}"
+                        Padding="10"
+                        Margin="0,10,0,0">
+
+                    <lvc:CartesianChart Series="{Binding LineSeries}"
+                                        XAxes="{Binding XAxes}"
+                                        YAxes="{Binding YAxes}"
+                                        Height="450"/>
+
+                </Border>
+
+            </StackPanel>
 
         </StackPanel>
     </ScrollViewer>

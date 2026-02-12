@@ -30,7 +30,7 @@
                   CanUserSortColumns="True"
                   RowDetailsVisibilityMode="VisibleWhenSelected">
 
-            <DataGrid.Columns>
+            <DataGrid.Columns >
 
                 <DataGridTextColumn Header="Nome"
                                     Binding="{Binding Nome}"

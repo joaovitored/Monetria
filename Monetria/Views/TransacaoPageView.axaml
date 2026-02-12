@@ -4,6 +4,7 @@
              x:Class="Monetria.Views.TransacaoPageView" 
              x:DataType="vm:TransacaoPageViewModel">
     
+     
     <!-- Grid principal para layout responsivo --> 
     <Grid Margin="10" RowDefinitions="Auto,Auto,Auto,*" ColumnDefinitions="*">
          <!-- Cabeçalho --> <TextBlock Grid.Row="0" Text="Bem vindo a aba de transações!" 
@@ -34,7 +35,7 @@
                                                 IsReadOnly="False"
                                                 GridLinesVisibility="All" 
                                                 BorderThickness="1" 
-                                                BorderBrush="Chartreuse" 
+                                                BorderBrush="Transparent" 
                                                 CanUserReorderColumns="True" 
                                                 CanUserResizeColumns="True"
                                                 CanUserSortColumns="True"

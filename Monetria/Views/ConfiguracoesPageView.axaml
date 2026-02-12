@@ -36,7 +36,7 @@
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center">
 
-                    <PathIcon Data="{StaticResource theme_icon}"
+                    <PathIcon Data="{StaticResource dark_theme_regular}"
                               Width="16"
                               Height="16"
                               VerticalAlignment="Center"
@@ -88,6 +88,9 @@
                         <TextBlock Text="Resetar dados" />
                     </StackPanel>
                 </RepeatButton>
+                
+                
+
 
                 <TextBlock Text="{Binding Message}"
                            Foreground="{Binding MessageColor}"/>
@@ -108,10 +111,10 @@
                            FontWeight="SemiBold"/>
 
                 <TextBlock Text="Monetria"/>
-                <TextBlock Text="Versão: 1.0.0.0"/>
-                <TextBlock Text="Desenvolvedor: Vitored / João Vitor"/>
+                <TextBlock Text="Versão: 1.0.0"/>
+                <TextBlock Text="Desenvolvedor: João Vitor"/>
 
-                <HyperlinkButton Content="Meu GitHub"
+                <HyperlinkButton Content="Repositório"
                                  NavigateUri="https://github.com/joaovitored"/>
             </StackPanel>
         </Border>

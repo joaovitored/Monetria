@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Cores para Light Mode -->
+    <Color x:Key="PrimaryBackgroundLight">White</Color>
+    <Color x:Key="SecondaryBackgroundLight">White</Color>
+    <Color x:Key="PrimaryForegroundLight">Black</Color>
+
+    
+
+    <!-- Usando os DynamicResource -->
+    <SolidColorBrush x:Key="PrimaryBackground" Color="{DynamicResource PrimaryBackgroundDark}" />
+    <SolidColorBrush x:Key="SecondaryBackground" Color="{DynamicResource SecondaryBackgroundDark}" />
+    <SolidColorBrush x:Key="PrimaryForeground" Color="{DynamicResource PrimaryForegroundDark}" />
+</ResourceDictionary>

@@ -22,18 +22,47 @@
             <Grid ColumnDefinitions="*,*" ColumnSpacing="16">
                 <!-- Pizza -->
                 <StackPanel Grid.Column="0" Spacing="6">
-                    <TextBlock Text="Distribuição de despesas por categoria" FontWeight="SemiBold"/>
-                    <TextBlock Text="Mostra quanto você gasta em cada categoria" FontSize="12" Foreground="Gray"/>
-                    <Border Padding="10" CornerRadius="6" Height="400">
+                    <TextBlock Text="Distribuição de despesas por categoria"
+                               FontWeight="SemiBold"
+                               Margin="8,4,0,0"/>
+                    
+                    <TextBlock Text="Mostra quanto você gasta em cada categoria" 
+                               FontSize="12"
+                               Foreground="Gray"
+                               Margin="8,4,0,0"/>
+                    
+                    <Border CornerRadius="15" 
+                            BorderThickness="2" 
+                            BorderBrush="{DynamicResource SystemAltMediumHighColor}"
+                            Background="{DynamicResource SystemAltHighColor}"
+                            Padding="10"
+                            Margin="0,10,0,0"
+                            Height="400">
+                        
+                        
                         <lvc:PieChart Series="{Binding PieSeries}" />
                     </Border>
                 </StackPanel>
 
                 <!-- Barras -->
                 <StackPanel Grid.Column="1" Spacing="6">
-                    <TextBlock Text="Receitas e Despesas por categoria" FontWeight="SemiBold"/>
-                    <TextBlock Text="Comparação de valores por categoria" FontSize="12" Foreground="Gray"/>
-                    <Border Padding="10" CornerRadius="6" Height="400">
+                    <TextBlock Text="Receitas e Despesas por categoria" 
+                               FontWeight="SemiBold"
+                               Margin="8,4,0,0"/>
+                    
+                    <TextBlock Text="Comparação de valores por categoria"
+                               FontSize="12"
+                               Foreground="Gray"
+                               Margin="8,4,0,0"/>
+                    
+                    <Border CornerRadius="15" 
+                            BorderThickness="2" 
+                            BorderBrush="{DynamicResource SystemAltMediumHighColor}"
+                            Background="{DynamicResource SystemAltHighColor}"
+                            Padding="10"
+                            Margin="0,10,0,0"
+                            Height="400">
+                        
                         <lvc:CartesianChart Series="{Binding BarSeries}" />
                     </Border>
                 </StackPanel>
@@ -41,9 +70,22 @@
 
             <!-- Linha embaixo -->
             <StackPanel Spacing="6">
-                <TextBlock Text="Evolução mensal do saldo" FontWeight="SemiBold"/>
-                <TextBlock Text="Mostra como seu saldo evoluiu ao longo dos meses" FontSize="12" Foreground="Gray"/>
-                <Border Padding="10" CornerRadius="6" Height="300">
+                <TextBlock Text="Evolução mensal do saldo" 
+                           FontWeight="SemiBold"
+                           Margin="8,4,0,0"/>
+                
+                <TextBlock Text="Mostra como seu saldo evoluiu ao longo dos meses" 
+                           FontSize="12"
+                           Foreground="Gray"
+                           Margin="8,4,0,0"/>
+                
+                <Border CornerRadius="15"
+                        BorderThickness="2"
+                        BorderBrush="{DynamicResource SystemAltMediumHighColor}" 
+                        Background="{DynamicResource SystemAltHighColor}"
+                        Padding="10" Margin="0,10,0,0" 
+                        Height="300">
+                    
                     <lvc:CartesianChart Series="{Binding LineSeries}"
                                         XAxes="{Binding XAxes}"
                                         YAxes="{Binding YAxes}" />

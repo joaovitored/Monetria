@@ -5,8 +5,6 @@
         <Nullable>enable</Nullable>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-
-        
     </PropertyGroup>
 
     <ItemGroup>
@@ -28,12 +26,8 @@
         <PackageReference Include="AvaloniaWASM.Storage" Version="1.0.0" />
         <PackageReference Include="ClosedXML" Version="0.105.0" />
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
-        <PackageReference Include="FluentTheme" Version="0.5.0-beta" />
         <PackageReference Include="LiveChartsCore" Version="2.0.0-rc6.1" />
         <PackageReference Include="LiveChartsCore.SkiaSharpView" Version="2.0.0-rc6.1" />
         <PackageReference Include="LiveChartsCore.SkiaSharpView.Avalonia" Version="2.0.0-rc6.1" />
-
     </ItemGroup>
-
-
 </Project>

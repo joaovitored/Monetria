@@ -6,7 +6,6 @@
 /.idea.Monetria.iml
 /contentModel.xml
 /modules.xml
-*.idea
 # Ignored default folder with query files
 /queries/
 # Datasource local storage ignored files
@@ -16,3 +15,19 @@
 /httpRequests/
 
 .fake
+
+# Rider / JetBrains
+.idea/
+
+# .NET build (em qualquer subpasta)
+**/bin/
+**/obj/
+
+# User settings
+*.user
+*.DotSettings.user
+
+# Logs
+*.log
+
+
