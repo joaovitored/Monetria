@@ -5,6 +5,7 @@ using Avalonia.Styling;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Monetria.Services;
+using Monetria.Enum;
 
 namespace Monetria.ViewModels;
 
@@ -18,14 +19,15 @@ public partial class ConfiguracoesPageViewModel : ViewModelBase
     public IReadOnlyList<AppTheme> AppThemes { get; } =
         new[] { AppTheme.System, AppTheme.Light, AppTheme.Dark };
 
+    // Corrigido: Nome do campo com underscore para seguir o padrão do CommunityToolkit.Mvvm
     [ObservableProperty]
-    private AppTheme currentAppTheme;
+    private AppTheme _currentAppTheme;
 
     [ObservableProperty]
-    private string message = "Clique 3 vezes para resetar os dados";
+    private string _message = "Clique 3 vezes para resetar os dados";
 
     [ObservableProperty]
-    private IBrush messageColor = Brushes.Gray;
+    private IBrush _messageColor = Brushes.Gray;
 
     public ConfiguracoesPageViewModel(
         TransacaoService transacaoService,
@@ -37,13 +39,14 @@ public partial class ConfiguracoesPageViewModel : ViewModelBase
         var tema = themeService.TemaAtual;
 
         if (tema == ThemeVariant.Dark)
-            CurrentAppTheme = AppTheme.Dark;
+            CurrentAppTheme = AppTheme.Dark;  // Propriedade gerada (com C maiúsculo)
         else if (tema == ThemeVariant.Light)
             CurrentAppTheme = AppTheme.Light;
         else
             CurrentAppTheme = AppTheme.System;
     }
 
+    // O partial void deve corresponder ao tipo do campo (AppTheme)
     partial void OnCurrentAppThemeChanged(AppTheme value)
     {
         switch (value)
@@ -69,7 +72,7 @@ public partial class ConfiguracoesPageViewModel : ViewModelBase
 
         if (_clickCount < 3)
         {
-            Message = $"Clique {_clickCount}/3 para resetar";
+            Message = $"Clique {_clickCount}/3 para resetar";  // Propriedade gerada
             MessageColor = Brushes.Gray;
             return;
         }

@@ -2,12 +2,15 @@
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 using Avalonia.Controls;
 using ClosedXML.Excel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Monetria.Models;
 using Monetria.Services;
+using Monetria.Enum;
+using Avalonia.Platform.Storage;
 
 namespace Monetria.ViewModels;
 
@@ -16,6 +19,12 @@ public partial class TransacaoPageViewModel : ViewModelBase
     private readonly TransacaoService _service;
 
     public ObservableCollection<Transacao> Transacoes => _service.Transacoes;
+
+    // Lista de opções para o ComboBox (hardcoded baseada no enum)
+    public List<string> TiposDisponiveis { get; } = new List<string> { TipoTransacao.Receita.ToString(), TipoTransacao.Despesa.ToString() };
+
+    // Propriedade estática para binding direto no XAML (evita problemas de contexto)
+    public static List<string> TiposDisponiveisStatic { get; } = new List<string> { TipoTransacao.Receita.ToString(), TipoTransacao.Despesa.ToString() };
 
     public TransacaoPageViewModel(TransacaoService service)
     {
@@ -40,25 +49,26 @@ public partial class TransacaoPageViewModel : ViewModelBase
     {
         try
         {
-            var dialog = new SaveFileDialog
-            {
-                Title = "Salvar arquivo Excel",
-                Filters = new List<FileDialogFilter>
-                {
-                    new FileDialogFilter { Name = "Excel Workbook", Extensions = { "xlsx" } }
-                },
-                DefaultExtension = "xlsx"
-            };
-
-            var mainWindow = App.Current.ApplicationLifetime
+            var topLevel = App.Current?.ApplicationLifetime
                 is Avalonia.Controls.ApplicationLifetimes.IClassicDesktopStyleApplicationLifetime desktop
                     ? desktop.MainWindow
                     : null;
 
-            if (mainWindow == null) return;
+            if (topLevel == null) return;
 
-            var caminho = await dialog.ShowAsync(mainWindow);
-            if (string.IsNullOrWhiteSpace(caminho)) return;
+            var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
+            {
+                Title = "Salvar arquivo Excel",
+                FileTypeChoices = new List<FilePickerFileType>
+                {
+                    new FilePickerFileType("Excel Workbook") { Patterns = new[] { "*.xlsx" } }
+                },
+                DefaultExtension = "xlsx"
+            });
+
+            if (file == null) return;
+
+            var caminho = file.Path.LocalPath;
 
             using var workbook = new XLWorkbook();
             var worksheet = workbook.Worksheets.Add("Transações");

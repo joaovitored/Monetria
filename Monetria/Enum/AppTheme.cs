@@ -1,4 +1,5 @@
-﻿namespace Monetria.ViewModels;
+﻿using Monetria.ViewModels;
+namespace Monetria.Enum;
 
 public enum AppTheme
 {

@@ -73,7 +73,8 @@
                                   AutoGenerateColumns="False"
                                   IsReadOnly="True"
                                   HeadersVisibility="Column"
-                                  GridLinesVisibility="Horizontal">
+                                  GridLinesVisibility="Horizontal"
+                                  HorizontalScrollBarVisibility="Disabled">  <!-- Adicionado para remover barra horizontal -->
 
                             <DataGrid.Columns>
 

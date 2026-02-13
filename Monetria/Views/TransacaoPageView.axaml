@@ -53,11 +53,15 @@
                        </DataTemplate>
                   </DataGridTemplateColumn.CellTemplate>
                  
-             </DataGridTemplateColumn> <!-- Tipo -->
-                 <DataGridTextColumn Header="Tipo"
-                                     Binding="{Binding 
-                                     Tipo, Mode=TwoWay}"
-                                     Width="*" /> <!-- Categoria -->
+             </DataGridTemplateColumn> <!-- Tipo com ComboBox -->
+                 <DataGridTemplateColumn Header="Tipo" Width="110">
+                     <DataGridTemplateColumn.CellTemplate>
+                         <DataTemplate>
+                             <ComboBox SelectedItem="{Binding Tipo, Mode=TwoWay}"
+                                       ItemsSource="{x:Static vm:TransacaoPageViewModel.TiposDisponiveisStatic}" />
+                         </DataTemplate>
+                     </DataGridTemplateColumn.CellTemplate>
+                 </DataGridTemplateColumn> <!-- Categoria -->
                  
                  <DataGridTextColumn
                      Header="Categoria"
@@ -94,6 +98,7 @@
                            
                       </DataGridTemplateColumn.CellEditingTemplate>
                  </DataGridTemplateColumn> 
+                 
                  <!-- Ações --> <DataGridTemplateColumn Header="Ações"
                                                         Width="120">
                        

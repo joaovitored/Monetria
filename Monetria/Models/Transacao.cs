@@ -9,7 +9,7 @@ public partial class Transacao : ObservableObject
 {
     [ObservableProperty] private bool _selecionar;
     [ObservableProperty] private DateTime _data;
-    [ObservableProperty] private string _tipo;
+    [ObservableProperty] private string _tipo;  // Volta a ser string (mais simples para binding)
     [ObservableProperty] private string _categoria;
     [ObservableProperty] private string _descricao;
     [ObservableProperty] private decimal _valor = 0m;
@@ -23,7 +23,7 @@ public partial class Transacao : ObservableObject
     public Transacao(Action<Transacao> excluir,
         bool selecionar = false,
         DateTime? data = null,
-        string tipo = "",
+        string tipo = "",  // Parâmetro volta a ser string
         string categoria = "",
         string descricao = "",
         decimal valor = 0m)
@@ -39,7 +39,7 @@ public partial class Transacao : ObservableObject
     }
 
     [JsonConstructor]
-    public Transacao(DateTime data, string tipo, string categoria, string descricao, decimal valor)
+    public Transacao(DateTime data, string tipo, string categoria, string descricao, decimal valor)  // Construtor JSON volta a usar string
     {
         _data = data;
         _tipo = tipo;
