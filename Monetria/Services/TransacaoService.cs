@@ -66,7 +66,7 @@ namespace Monetria.Services
         }
 
         // Handler para mudanças em propriedades de Transacao
-        private void OnTransacaoPropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void OnTransacaoPropertyChanged(object? sender, PropertyChangedEventArgs e)  // Corrigido: aceita object? para permitir nulo
         {
             // Salva sempre que qualquer propriedade muda (pode filtrar por propriedade se necessário, ex.: if (e.PropertyName == "Value"))
             Salvar();
