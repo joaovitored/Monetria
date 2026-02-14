@@ -32,7 +32,7 @@ Monetria é uma aplicação de gerenciamento de finanças pessoais, desenvolvida
 - Visualização rápida do fluxo financeiro mensal/anual.
 
 <p align="center">
-  <img src="./Assets/Screenshots/BR/Dashboard.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Screenshots/BR/Dashboard.png" width="840" alt="Dashboard">
 </p>
 
 ### Transações
@@ -43,7 +43,7 @@ Monetria é uma aplicação de gerenciamento de finanças pessoais, desenvolvida
 - Possibilidade de exportar dados para .xlsx (excel).
 
 <p align="center">
-  <img src="./Assets/Screenshots/BR/Transações.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Screenshots/BR/Transações.png" width="840" alt="Transações">
 </p>
 
 ### Categorias
@@ -53,7 +53,7 @@ Monetria é uma aplicação de gerenciamento de finanças pessoais, desenvolvida
 - Filtro por Todos, Despesa e Receita.
 
 <p align="center">
-  <img src="./Assets/Screenshots/BR/Categorias.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Screenshots/BR/Categorias.png" width="840" alt="Categorias">
 </p>
 
 ### Relatórios
@@ -62,7 +62,7 @@ Monetria é uma aplicação de gerenciamento de finanças pessoais, desenvolvida
 - Filtro por mês e ano.
 
 <p align="center">
-  <img src="./Assets/Screenshots/BR/Relatório.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Screenshots/BR/Relatório.png" width="840" alt="Relatórios">
 </p>
 
 ### Configurações
@@ -70,7 +70,7 @@ Monetria é uma aplicação de gerenciamento de finanças pessoais, desenvolvida
 - Resetar os dados dos relatórios.
 
 <p align="center">
-  <img src="./Assets/Screenshots/BR/Configurações.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Screenshots/BR/Configurações.png" width="840" alt="Configurações">
 </p>
 
 ---

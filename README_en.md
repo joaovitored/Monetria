@@ -4,7 +4,7 @@
 # Monetria
 
 <p align="center">
-  <img src="./Assets/Images/MonetriaIcon_En.png" width="340" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Images/MonetriaIcon_En.png" width="340" alt="Monetria Logo">
 </p>
 
 **🇧🇷 [Português](README.md)** | [🇺🇸 English]
@@ -36,7 +36,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Quick view of monthly/annual financial flow.
 
 <p align="center">
-  <img src="./Assets/Screenshots/Dashboard.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Screenshots/Dashboard.png" width="840" alt="Dashboard">
 </p>
 
 ### Transactions
@@ -47,7 +47,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Ability to export data to .xlsx (Excel).
 
 <p align="center">
-  <img src="./Assets/Screenshots/Transactions.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Screenshots/Transactions.png" width="840" alt="Transactions">
 </p>
 
 ### Categories
@@ -57,7 +57,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Filter by All, Expense, and Income.
 
 <p align="center">
-  <img src="./Assets/Screenshots/Categories.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Monetria/Assets/Screenshots/Categories.png" width="840" alt="Categories">
 </p>
 
 ### Reports
@@ -66,7 +66,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Filter by month and year.
 
 <p align="center">
-  <img src="./Assets/Screenshots/Report.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Screenshots/Report.png" width="840" alt="Reports">
 </p>
 
 ### Settings
@@ -74,7 +74,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Reset report data.
 
 <p align="center">
-  <img src="./Assets/Screenshots/Settings.png" width="840" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Screenshots/Settings.png" width="840" alt="Settings">
 </p>
 
 ---
