@@ -10,7 +10,7 @@
 
     <ScrollViewer>
         <StackPanel Spacing="16" Margin="16">
-            <TextBlock Text="Relatório de Transações" FontSize="20" FontWeight="Bold"/>
+            <TextBlock Text="Transaction Report" FontSize="20" FontWeight="Bold"/>
 
             <!-- Filtros -->
             <Grid ColumnDefinitions="120,*,120,*" Margin="0,0,0,10">
@@ -22,11 +22,11 @@
             <Grid ColumnDefinitions="*,*" ColumnSpacing="16">
                 <!-- Pizza -->
                 <StackPanel Grid.Column="0" Spacing="6">
-                    <TextBlock Text="Distribuição de despesas por categoria"
+                    <TextBlock Text="Expense Distribution by Category"
                                FontWeight="SemiBold"
                                Margin="8,4,0,0"/>
                     
-                    <TextBlock Text="Mostra quanto você gasta em cada categoria" 
+                    <TextBlock Text="Shows how much you spend in each category." 
                                FontSize="12"
                                Foreground="Gray"
                                Margin="8,4,0,0"/>
@@ -46,11 +46,11 @@
 
                 <!-- Barras -->
                 <StackPanel Grid.Column="1" Spacing="6">
-                    <TextBlock Text="Receitas e Despesas por categoria" 
+                    <TextBlock Text="Revenue and Expenses by Category" 
                                FontWeight="SemiBold"
                                Margin="8,4,0,0"/>
                     
-                    <TextBlock Text="Comparação de valores por categoria"
+                    <TextBlock Text="Comparison of Values by Category"
                                FontSize="12"
                                Foreground="Gray"
                                Margin="8,4,0,0"/>
@@ -70,11 +70,12 @@
 
             <!-- Linha embaixo -->
             <StackPanel Spacing="6">
-                <TextBlock Text="Evolução mensal do saldo" 
+                <TextBlock Text="Monthly Balance Evolution
+" 
                            FontWeight="SemiBold"
                            Margin="8,4,0,0"/>
                 
-                <TextBlock Text="Mostra como seu saldo evoluiu ao longo dos meses" 
+                <TextBlock Text="Shows how your balance has evolved over the months." 
                            FontSize="12"
                            Foreground="Gray"
                            Margin="8,4,0,0"/>

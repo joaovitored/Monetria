@@ -84,14 +84,14 @@ namespace Monetria.ViewModels
         public ObservableCollection<ListItemTemplate> ItemsTopo { get; } = new()
         {
             new(typeof(DashboardPageViewModel), "Dashboard", "glance_regular"),
-            new(typeof(TransacaoPageViewModel), "Transações", "money_regular"),
-            new(typeof(CategoriasPageViewModel), "Categorias", "grid_regular"),
-            new(typeof(RelatorioPageViewModel), "Relatórios", "book_pulse_regular"),
+            new(typeof(TransacaoPageViewModel), "Transactions", "money_regular"),
+            new(typeof(CategoriasPageViewModel), "Categories", "grid_regular"),
+            new(typeof(RelatorioPageViewModel), "Reports", "book_pulse_regular"),
         };
 
         public ObservableCollection<ListItemTemplate> ItemsFundo { get; } = new()
         {
-            new(typeof(ConfiguracoesPageViewModel), "Configurações", "settings_regular"),
+            new(typeof(ConfiguracoesPageViewModel), "Settings", "settings_regular"),
         };
 
         [RelayCommand]

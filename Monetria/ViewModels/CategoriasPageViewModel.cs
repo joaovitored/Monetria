@@ -14,11 +14,11 @@ public partial class CategoriasPageViewModel : ViewModelBase
 
     //filtro selecionado
     [ObservableProperty]
-    private string _filtroTipo = "Todos";
+    private string _filtroTipo = "All";
 
     //opções do combobox
     public ObservableCollection<string> TiposFiltro { get; } =
-        new() { "Todos", "Receita", "Despesa" };
+        new() { "All", "Income", "Expenditure" };
 
     public CategoriasPageViewModel()
     {
@@ -40,7 +40,7 @@ public partial class CategoriasPageViewModel : ViewModelBase
 
         var transacoes = _transacaoService.Transacoes.AsEnumerable();
 
-        if (FiltroTipo != "Todos")
+        if (FiltroTipo != "All")
             transacoes = transacoes.Where(t => t.Tipo == FiltroTipo);
 
         var grupos = transacoes
@@ -50,7 +50,7 @@ public partial class CategoriasPageViewModel : ViewModelBase
         foreach (var grupo in grupos)
         {
             var tipo = grupo.First().Tipo;
-            var cor = tipo == "Despesa" ? "Red" : "Green";
+            var cor = tipo == "Expenditure" ? "Red" : "Green";
 
             var categoria = new Categoria(grupo.Key, tipo, cor);
 

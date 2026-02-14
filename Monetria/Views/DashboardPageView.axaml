@@ -13,12 +13,12 @@
 
             <!-- Cabeçalho -->
             <StackPanel Spacing="6">
-                <TextBlock Text="Bem vindo ao Dashboard!"
+                <TextBlock Text="Welcome to the Dashboard!"
                            FontSize="20"
                            FontWeight="Bold"
                            TextWrapping="Wrap"/>
 
-                <TextBlock Text="Aqui será onde você poderá ver o resumo de seus ganhos e gastos"
+                <TextBlock Text="This is where you can view a summary of your earnings and expenses."
                            FontWeight="SemiBold"
                            TextWrapping="Wrap"/>
             </StackPanel>
@@ -26,12 +26,12 @@
             <!-- Seção Pizza -->
             <StackPanel Spacing="6">
 
-                <TextBlock Text="Distribuição geral"
+                <TextBlock Text="General Distribution"
                            FontWeight="SemiBold"
                            TextWrapping="Wrap"
                            Margin="5,24,0,0"/>
 
-                <TextBlock Text="Resumo visual das suas receitas e despesas"
+                <TextBlock Text="A visual summary of your revenues and expenses."
                            FontSize="12"
                            Foreground="Gray"
                            TextWrapping="Wrap"
@@ -56,12 +56,12 @@
             <!-- Seção Linha -->
             <StackPanel Spacing="6">
 
-                <TextBlock Text="Evolução anual do saldo"
+                <TextBlock Text="Annual Balance Evolution"
                            FontWeight="SemiBold"
                            TextWrapping="Wrap"
                            Margin="5,14,0,0"/>
 
-                <TextBlock Text="Mostra como seus ganhos evoluíram ao longo dos anos"
+                <TextBlock Text="Shows how your earnings have evolved over the years."
                            FontSize="12"
                            Foreground="Gray"
                            TextWrapping="Wrap"

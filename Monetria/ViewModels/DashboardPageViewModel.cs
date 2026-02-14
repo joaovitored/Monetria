@@ -83,7 +83,7 @@ namespace Monetria.ViewModels
                 {
                     Ano = g.Key.Year,
                     Mes = g.Key.Month,
-                    TotalMes = g.Sum(t => t.Tipo == "Receita" ? (double)t.Valor : -(double)t.Valor)
+                    TotalMes = g.Sum(t => t.Tipo == "Income" ? (double)t.Valor : -(double)t.Valor)
                 })
                 .ToList();
 
@@ -91,7 +91,7 @@ namespace Monetria.ViewModels
             LineSeries.Add(new LineSeries<double>
             {
                 Values = agrupado.Select(a => a.TotalMes).ToArray(),
-                Name = "Evolução Mensal (R$)"
+                Name = "Monthly Evolution ($)"
             });
 
             //labels X (ex: Jan/2026)

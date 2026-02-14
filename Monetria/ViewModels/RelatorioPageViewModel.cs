@@ -169,7 +169,7 @@ namespace Monetria.ViewModels
 
             // Atualiza o gráfico de barras (receitas e despesas)
             BarSeries.Clear();
-            var totalReceitas = transacoes.Where(t => t.Tipo == "Receita").Sum(t => t.Valor);
+            var totalReceitas = transacoes.Where(t => t.Tipo == "Income").Sum(t => t.Valor);
             var totalDespesas = transacoes.Where(t => t.Tipo == "Despesa").Sum(t => t.Valor);
 
             // Log para depuração
@@ -198,7 +198,7 @@ namespace Monetria.ViewModels
                 .GroupBy(t => new { t.Data.Year, t.Data.Month })  // Agrupar por ano e mês
                 .Select(g =>
                 {
-                    saldo += g.Sum(t => t.Tipo == "Receita" ? (double)t.Valor : -(double)t.Valor);
+                    saldo += g.Sum(t => t.Tipo == "Income" ? (double)t.Valor : -(double)t.Valor);
                     return saldo;
                 })
                 .ToArray();

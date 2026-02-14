@@ -18,8 +18,9 @@ public partial class Transacao : ObservableObject
     public IRelayCommand ExcluirCommand { get; set; }  
 
     [JsonIgnore]
-    public string ValorFormatado => $"R$ {Valor:N2}";
+    public string ValorFormatado => $"$ {Valor:N2}";
 
+    
     public Transacao(Action<Transacao> excluir,
         bool selecionar = false,
         DateTime? data = null,

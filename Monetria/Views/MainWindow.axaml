@@ -7,7 +7,7 @@
         Width="1280" Height="720"
         x:Class="Monetria.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/Images/BR/Monetria-Dark-Mode.png"
+        Icon="/Assets/Images/BR/Monetria-Dark-Mode-icon.png"
         Title="Monetria"
         WindowState="Maximized"
         SystemDecorations="Full">

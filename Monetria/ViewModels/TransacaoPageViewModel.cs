@@ -21,10 +21,10 @@ public partial class TransacaoPageViewModel : ViewModelBase
     public ObservableCollection<Transacao> Transacoes => _service.Transacoes;
 
     // Lista de opções para o ComboBox (hardcoded baseada no enum)
-    public List<string> TiposDisponiveis { get; } = new List<string> { TipoTransacao.Receita.ToString(), TipoTransacao.Despesa.ToString() };
+    public List<string> TiposDisponiveis { get; } = new List<string> { TipoTransacao.Income.ToString(), TipoTransacao.Expenditure.ToString() };
 
     // Propriedade estática para binding direto no XAML (evita problemas de contexto)
-    public static List<string> TiposDisponiveisStatic { get; } = new List<string> { TipoTransacao.Receita.ToString(), TipoTransacao.Despesa.ToString() };
+    public static List<string> TiposDisponiveisStatic { get; } = new List<string> { TipoTransacao.Income.ToString(), TipoTransacao.Expenditure.ToString() };
 
     public TransacaoPageViewModel(TransacaoService service)
     {
@@ -71,14 +71,14 @@ public partial class TransacaoPageViewModel : ViewModelBase
             var caminho = file.Path.LocalPath;
 
             using var workbook = new XLWorkbook();
-            var worksheet = workbook.Worksheets.Add("Transações");
+            var worksheet = workbook.Worksheets.Add("Transaction");
 
             // cabeçalho
-            worksheet.Cell(1, 1).Value = "Data";
-            worksheet.Cell(1, 2).Value = "Tipo";
-            worksheet.Cell(1, 3).Value = "Categoria";
-            worksheet.Cell(1, 4).Value = "Descrição";
-            worksheet.Cell(1, 5).Value = "Valor";
+            worksheet.Cell(1, 1).Value = "Dat";
+            worksheet.Cell(1, 2).Value = "Type";
+            worksheet.Cell(1, 3).Value = "Categories";
+            worksheet.Cell(1, 4).Value = "Description";
+            worksheet.Cell(1, 5).Value = "Value";
 
             int row = 2;
             foreach (var t in _service.Transacoes)

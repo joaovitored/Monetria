@@ -7,7 +7,7 @@
      
     <!-- Grid principal para layout responsivo --> 
     <Grid Margin="10" RowDefinitions="Auto,Auto,Auto,*" ColumnDefinitions="*">
-         <!-- Cabeçalho --> <TextBlock Grid.Row="0" Text="Bem vindo a aba de transações!" 
+         <!-- Cabeçalho --> <TextBlock Grid.Row="0" Text="Welcome to the Transactions Tab!" 
                            FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/> 
          
          <!-- Botões --> <Grid Grid.Row="1" 
@@ -15,10 +15,10 @@
                                Margin="0,0,0,10">
              <Button Grid.Column="0" 
                      Command="{Binding NovaTransacaoCommand}"
-                     Content="+ Nova Transação" Width="140"/> 
+                     Content="+ New Transaction" Width="142"/> 
              
              <Button Grid.Column="1" 
-                     Content="Exportar Excel" 
+                     Content="Export to Excel" 
                      Command="{Binding ExportarExcelAsync}" 
                      Width="140"/>
              
@@ -54,7 +54,7 @@
                   </DataGridTemplateColumn.CellTemplate>
                  
              </DataGridTemplateColumn> <!-- Tipo com ComboBox -->
-                 <DataGridTemplateColumn Header="Tipo" Width="110">
+                 <DataGridTemplateColumn Header="Type" Width="110">
                      <DataGridTemplateColumn.CellTemplate>
                          <DataTemplate>
                              <ComboBox SelectedItem="{Binding Tipo, Mode=TwoWay}"
@@ -64,15 +64,15 @@
                  </DataGridTemplateColumn> <!-- Categoria -->
                  
                  <DataGridTextColumn
-                     Header="Categoria"
+                     Header="Category"
                      Binding="{Binding Categoria, Mode=TwoWay}"
                      Width="*" /> <!-- Descrição --> 
                  
-                 <DataGridTextColumn Header="Descrição"
+                 <DataGridTextColumn Header="Description"
                                      Binding="{Binding Descricao, Mode=TwoWay}" 
                                      Width="2*" /> <!-- Valor com R$ e centralizado --> 
                  
-                 <DataGridTemplateColumn Header="Valor" 
+                 <DataGridTemplateColumn Header="Value" 
                                          Width="100" SortMemberPath="Valor">
                      
                       <DataGridTemplateColumn.CellTemplate>
@@ -99,14 +99,14 @@
                       </DataGridTemplateColumn.CellEditingTemplate>
                  </DataGridTemplateColumn> 
                  
-                 <!-- Ações --> <DataGridTemplateColumn Header="Ações"
+                 <!-- Ações --> <DataGridTemplateColumn Header="Actions"
                                                         Width="120">
                        
                      <DataGridTemplateColumn.CellTemplate>
                            <DataTemplate>
                                 <StackPanel Orientation="Horizontal"
                                             HorizontalAlignment="Center" 
-                                            Spacing="6"> <Button Content="Excluir"
+                                            Spacing="6"> <Button Content="Delete"
                                                                  Command="{Binding ExcluirCommand}" /> 
                                 </StackPanel>
                                

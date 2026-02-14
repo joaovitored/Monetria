@@ -2,7 +2,7 @@
 {
     public enum TipoTransacao
     {
-        Receita,
-        Despesa
+        Income,
+        Expenditure
     }
 }

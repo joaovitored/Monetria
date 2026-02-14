@@ -7,13 +7,13 @@
 
     <StackPanel Margin="10" Spacing="10">
 
-        <TextBlock Text="Categorias"
+        <TextBlock Text="Categories"
                    FontSize="20"
                    FontWeight="Bold"/>
 
         <!--  Filtro -->
         <StackPanel Orientation="Horizontal" Spacing="8">
-            <TextBlock Text="Filtrar por tipo:"
+            <TextBlock Text="Filter by type:"
                        VerticalAlignment="Center"/>
 
             <ComboBox Width="160"
@@ -32,11 +32,11 @@
 
             <DataGrid.Columns >
 
-                <DataGridTextColumn Header="Nome"
+                <DataGridTextColumn Header="Name"
                                     Binding="{Binding Nome}"
                                     Width="*" />
 
-                <DataGridTextColumn Header="Tipo"
+                <DataGridTextColumn Header="Type"
                                     Binding="{Binding Tipo}"
                                     Width="120"/>
 
@@ -45,7 +45,7 @@
                                     Binding="{Binding TotalFormatado}"
                                     Width="140"/>
 
-                <DataGridTemplateColumn Header="Cor" Width="80">
+                <DataGridTemplateColumn Header="Color" Width="80">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Border Width="14"

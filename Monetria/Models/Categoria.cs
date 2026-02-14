@@ -7,7 +7,7 @@ namespace Monetria.Models;
 public partial class Categoria : ObservableObject
 {
     [ObservableProperty] private string _nome;
-    [ObservableProperty] private string _tipo; // Receita / Despesa
+    [ObservableProperty] private string _tipo; // Income / Expenditure
     [ObservableProperty] private string _cor;
 
     // Transações ligadas a essa categoria
@@ -16,7 +16,7 @@ public partial class Categoria : ObservableObject
     // Total calculado automaticamente
     public decimal Total => Transacoes.Sum(t => t.Valor);
 
-    public string TotalFormatado => $"R$ {Total:N2}";
+    public string TotalFormatado => $"$ {Total:N2}";
 
     public Categoria(string nome, string tipo, string cor)
     {
