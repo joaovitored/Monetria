@@ -4,7 +4,7 @@
 # Monetria
 
 <p align="center">
-  <img src="./Monetria/Assets/Images/MonetriaIcon_En.png" width="340" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Images/EN/MonetriaIcon_En.png" width="340" alt="Monetria Logo">
 </p>
 
 **🇧🇷 [Português](README.md)** | [🇺🇸 English]
