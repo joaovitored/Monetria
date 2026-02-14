@@ -8,45 +8,44 @@ namespace Monetria.Models;
 public partial class Transacao : ObservableObject
 {
     [ObservableProperty] private bool _selecionar;
-    [ObservableProperty] private DateTime _data;
-    [ObservableProperty] private string _tipo;  // Volta a ser string (mais simples para binding)
-    [ObservableProperty] private string _categoria;
-    [ObservableProperty] private string _descricao;
-    [ObservableProperty] private decimal _valor = 0m;
+    [ObservableProperty] private DateTime _date;
+    [ObservableProperty] private string _type;  // Tipo da transação
+    [ObservableProperty] private string _categories; // Categoria
+    [ObservableProperty] private string _description; // Descrição
+    [ObservableProperty] private decimal _value = 0m; // Valor da transação
 
     [JsonIgnore]
     public IRelayCommand ExcluirCommand { get; set; }  
 
     [JsonIgnore]
-    public string ValorFormatado => $"$ {Valor:N2}";
+    public string ValorFormatado => $"$ {Value:N2}";  // Formatação do valor
 
-    
     public Transacao(Action<Transacao> excluir,
         bool selecionar = false,
-        DateTime? data = null,
-        string tipo = "",  // Parâmetro volta a ser string
-        string categoria = "",
-        string descricao = "",
-        decimal valor = 0m)
+        DateTime? date = null,
+        string type = "",  // Tipo de transação
+        string categories = "",
+        string description = "",
+        decimal value = 0m)
     {
         _selecionar = selecionar;
-        _data = data ?? DateTime.Now;
-        _tipo = tipo;
-        _categoria = categoria;
-        _descricao = descricao;
-        _valor = valor;
+        _date = date ?? DateTime.Now;
+        _type = type;
+        _categories = categories;
+        _description = description;
+        _value = value;
 
         ExcluirCommand = new RelayCommand(() => excluir(this));
     }
 
     [JsonConstructor]
-    public Transacao(DateTime data, string tipo, string categoria, string descricao, decimal valor)  // Construtor JSON volta a usar string
+    public Transacao(DateTime date, string type, string categories, string description, decimal value)
     {
-        _data = data;
-        _tipo = tipo;
-        _categoria = categoria;
-        _descricao = descricao;
-        _valor = valor;
+        _date = date;
+        _type = type;
+        _categories = categories;
+        _description = description;
+        _value = value;
 
         ExcluirCommand = null!;
     }

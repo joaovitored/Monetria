@@ -43,21 +43,21 @@
                                                 VerticalAlignment="Stretch">
              
              <DataGrid.Columns> <!-- Data --> <DataGridTemplateColumn 
-                                                  Header="Data" 
+                                                  Header="Date" 
                                                   Width="120" 
-                                                  SortMemberPath="Data">
+                                                  SortMemberPath="Date">
                  
                  <DataGridTemplateColumn.CellTemplate>
                        <DataTemplate>
-                            <CalendarDatePicker SelectedDate="{Binding Data, Mode=TwoWay}" />
+                            <CalendarDatePicker SelectedDate="{Binding Date, Mode=TwoWay}" />
                        </DataTemplate>
                   </DataGridTemplateColumn.CellTemplate>
                  
              </DataGridTemplateColumn> <!-- Tipo com ComboBox -->
-                 <DataGridTemplateColumn Header="Type" Width="110">
+                 <DataGridTemplateColumn Header="Type" Width="130">
                      <DataGridTemplateColumn.CellTemplate>
                          <DataTemplate>
-                             <ComboBox SelectedItem="{Binding Tipo, Mode=TwoWay}"
+                             <ComboBox SelectedItem="{Binding Type, Mode=TwoWay}"
                                        ItemsSource="{x:Static vm:TransacaoPageViewModel.TiposDisponiveisStatic}" />
                          </DataTemplate>
                      </DataGridTemplateColumn.CellTemplate>
@@ -65,11 +65,11 @@
                  
                  <DataGridTextColumn
                      Header="Category"
-                     Binding="{Binding Categoria, Mode=TwoWay}"
+                     Binding="{Binding Categories, Mode=TwoWay}"
                      Width="*" /> <!-- Descrição --> 
                  
                  <DataGridTextColumn Header="Description"
-                                     Binding="{Binding Descricao, Mode=TwoWay}" 
+                                     Binding="{Binding Description, Mode=TwoWay}" 
                                      Width="2*" /> <!-- Valor com R$ e centralizado --> 
                  
                  <DataGridTemplateColumn Header="Value" 
@@ -87,7 +87,7 @@
                       <DataGridTemplateColumn.CellEditingTemplate>
                             <DataTemplate>
                                  
-                                 <TextBox Text="{Binding Valor,
+                                 <TextBox Text="{Binding Value,
                                           Mode=TwoWay, 
                                           UpdateSourceTrigger=LostFocus, 
                                           TargetNullValue=0,StringFormat=N2}" 

@@ -41,15 +41,15 @@ public partial class CategoriasPageViewModel : ViewModelBase
         var transacoes = _transacaoService.Transacoes.AsEnumerable();
 
         if (FiltroTipo != "All")
-            transacoes = transacoes.Where(t => t.Tipo == FiltroTipo);
+            transacoes = transacoes.Where(t => t.Type == FiltroTipo);
 
         var grupos = transacoes
-            .GroupBy(t => t.Categoria)
+            .GroupBy(t => t.Categories)
             .ToList();
 
         foreach (var grupo in grupos)
         {
-            var tipo = grupo.First().Tipo;
+            var tipo = grupo.First().Type;
             var cor = tipo == "Expenditure" ? "Red" : "Green";
 
             var categoria = new Categoria(grupo.Key, tipo, cor);

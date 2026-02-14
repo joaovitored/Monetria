@@ -36,8 +36,4 @@
         <PackageReference Include="LiveChartsCore.SkiaSharpView" Version="2.0.0-rc6.1" />
         <PackageReference Include="LiveChartsCore.SkiaSharpView.Avalonia" Version="2.0.0-rc6.1" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Assets\Screenshots\EN\" />
-    </ItemGroup>
 </Project>

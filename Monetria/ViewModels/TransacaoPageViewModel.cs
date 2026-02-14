@@ -74,7 +74,7 @@ public partial class TransacaoPageViewModel : ViewModelBase
             var worksheet = workbook.Worksheets.Add("Transaction");
 
             // cabeçalho
-            worksheet.Cell(1, 1).Value = "Dat";
+            worksheet.Cell(1, 1).Value = "Date";
             worksheet.Cell(1, 2).Value = "Type";
             worksheet.Cell(1, 3).Value = "Categories";
             worksheet.Cell(1, 4).Value = "Description";
@@ -83,11 +83,11 @@ public partial class TransacaoPageViewModel : ViewModelBase
             int row = 2;
             foreach (var t in _service.Transacoes)
             {
-                worksheet.Cell(row, 1).Value = t.Data;
-                worksheet.Cell(row, 2).Value = t.Tipo;
-                worksheet.Cell(row, 3).Value = t.Categoria;
-                worksheet.Cell(row, 4).Value = t.Descricao;
-                worksheet.Cell(row, 5).Value = t.Valor;
+                worksheet.Cell(row, 1).Value = t.Date;
+                worksheet.Cell(row, 2).Value = t.Type;
+                worksheet.Cell(row, 3).Value = t.Categories;
+                worksheet.Cell(row, 4).Value = t.Description;
+                worksheet.Cell(row, 5).Value = t.Value;
                 row++;
             }
 

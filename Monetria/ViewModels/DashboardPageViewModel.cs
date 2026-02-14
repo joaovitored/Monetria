@@ -44,8 +44,8 @@ namespace Monetria.ViewModels
             PieSeries.Clear();
 
             var grupos = _service.Transacoes
-                .GroupBy(t => t.Categoria)
-                .Select(g => new { Categoria = g.Key, Total = g.Sum(t => t.Valor) })
+                .GroupBy(t => t.Categories)
+                .Select(g => new { Categoria = g.Key, Total = g.Sum(t => t.Value) })
                 .ToList();
 
             foreach (var g in grupos)
@@ -58,7 +58,7 @@ namespace Monetria.ViewModels
             }
 
             // adiciona total apenas na legenda
-            var total = _service.Transacoes.Sum(t => t.Valor);
+            var total = _service.Transacoes.Sum(t => t.Value);
             PieSeries.Add(new PieSeries<double>
             {
                 Values = new double[] { 0 },
@@ -77,13 +77,13 @@ namespace Monetria.ViewModels
 
             //agrupa por mês e ano, mas sem acumular valores
             var agrupado = _service.Transacoes
-                .OrderBy(t => t.Data)
-                .GroupBy(t => new { t.Data.Year, t.Data.Month })
+                .OrderBy(t => t.Date)
+                .GroupBy(t => new { t.Date.Year, t.Date.Month })
                 .Select(g => new
                 {
                     Ano = g.Key.Year,
                     Mes = g.Key.Month,
-                    TotalMes = g.Sum(t => t.Tipo == "Income" ? (double)t.Valor : -(double)t.Valor)
+                    TotalMes = g.Sum(t => t.Type == "Income" ? (double)t.Value : -(double)t.Value)
                 })
                 .ToList();
 

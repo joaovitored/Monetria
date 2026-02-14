@@ -33,11 +33,11 @@
             <DataGrid.Columns >
 
                 <DataGridTextColumn Header="Name"
-                                    Binding="{Binding Nome}"
+                                    Binding="{Binding Name}"
                                     Width="*" />
 
                 <DataGridTextColumn Header="Type"
-                                    Binding="{Binding Tipo}"
+                                    Binding="{Binding Type}"
                                     Width="120"/>
 
                 
@@ -50,7 +50,7 @@
                         <DataTemplate>
                             <Border Width="14"
                                     Height="14"
-                                    Background="{Binding Cor}"
+                                    Background="{Binding Color}"
                                     CornerRadius="7"
                                     HorizontalAlignment="Center"/>
                         </DataTemplate>
@@ -78,19 +78,19 @@
 
                             <DataGrid.Columns>
 
-                                <DataGridTextColumn Header="Data"
-                                                    Binding="{Binding Data, StringFormat='{}{0:dd/MM/yyyy}'}"
+                                <DataGridTextColumn Header="Date"
+                                                    Binding="{Binding Date, StringFormat='{}{0:dd/MM/yyyy}'}"
                                                     Width="120"/>
 
                                 <DataGridTextColumn Header="Tipo"
-                                                    Binding="{Binding Tipo}"
+                                                    Binding="{Binding Type}"
                                                     Width="120"/>
 
                                 <DataGridTextColumn Header="Descrição"
-                                                    Binding="{Binding Descricao}"
+                                                    Binding="{Binding Description}"
                                                     Width="*"/>
 
-                                <DataGridTextColumn Header="Valor"
+                                <DataGridTextColumn Header="Value"
                                                     Binding="{Binding ValorFormatado}"
                                                     Width="120"/>
 

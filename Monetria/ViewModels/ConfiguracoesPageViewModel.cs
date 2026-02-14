@@ -24,7 +24,7 @@ public partial class ConfiguracoesPageViewModel : ViewModelBase
     private AppTheme _currentAppTheme;
 
     [ObservableProperty]
-    private string _message = "Clique 3 vezes para resetar os dados";
+    private string _message = "Click 3 times to reset the data.";
 
     [ObservableProperty]
     private IBrush _messageColor = Brushes.Gray;
@@ -72,14 +72,14 @@ public partial class ConfiguracoesPageViewModel : ViewModelBase
 
         if (_clickCount < 3)
         {
-            Message = $"Clique {_clickCount}/3 para resetar";  // Propriedade gerada
+            Message = $"Click {_clickCount}/3 for reset";  // Propriedade gerada
             MessageColor = Brushes.Gray;
             return;
         }
 
         _transacaoService.ResetarTudo();
 
-        Message = "Dados resetados com sucesso!";
+        Message = "Data reset successfully!";
         MessageColor = Brushes.Green;
 
         _clickCount = 0;

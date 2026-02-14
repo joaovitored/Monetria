@@ -36,7 +36,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Quick view of monthly/annual financial flow.
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/Dashboard.png" width="840" alt="Dashboard">
+  <img src="./Monetria/Assets/Screenshots/EN/Dashboard.png" width="840" alt="Dashboard">
 </p>
 
 ### Transactions
@@ -47,7 +47,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Ability to export data to .xlsx (Excel).
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/Transactions.png" width="840" alt="Transactions">
+  <img src="./Monetria/Assets/Screenshots/EN/Transactions.png" width="840" alt="Transactions">
 </p>
 
 ### Categories
@@ -57,7 +57,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Filter by All, Expense, and Income.
 
 <p align="center">
-  <img src="./Monetria/Monetria/Assets/Screenshots/Categories.png" width="840" alt="Categories">
+  <img src="./Monetria/Monetria/Assets/Screenshots/EN/Categories.png" width="840" alt="Categories">
 </p>
 
 ### Reports
@@ -66,7 +66,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Filter by month and year.
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/Report.png" width="840" alt="Reports">
+  <img src="./Monetria/Assets/Screenshots/EN/Report.png" width="840" alt="Reports">
 </p>
 
 ### Settings
@@ -74,7 +74,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Reset report data.
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/Settings.png" width="840" alt="Settings">
+  <img src="./Monetria/Assets/Screenshots/EN/Settings.png" width="840" alt="Settings">
 </p>
 
 ---
@@ -82,7 +82,7 @@ Monetria is a personal finance management application developed with <a href="ht
 ## System Requirements
 
 ### Operating System
-- Windows 10/Windows 11 (build 10240+) x64 or Linux
+- Windows 10/Windows 11 (build 10240+) x64 or Linux(not unbutu)
 - **Note:** Windows 7, 8, or 8.1 may not be supported.
 
 ### Support
