@@ -3,7 +3,7 @@
   <img src="./Monetria/Assets/Images/BR/Monetria-Dark-Mode.png" width="340" alt="Monetria Logo">
 </p>
 
-**🇧🇷 Português** | [🇺🇸 English](https://github.com/joaovitored/Monetria/blob/EnglishTranslated/README_en.md)
+**🇧🇷 Português** | [🇺🇸 English](https://github.com/joaovitored/Monetria/blob/EnglishTranslated/README.md)
 
 Monetria é uma aplicação de gerenciamento de finanças pessoais, desenvolvida com <a href="https://github.com/AvaloniaUI/Avalonia">Avalonia</a>, .NET 8 e diversas bibliotecas de gráficos e manipulação de planilhas. O app ajuda os usuários a controlar gastos, planejar orçamentos e monitorar sua saúde financeira de forma simples e eficaz.
 
