@@ -17,10 +17,10 @@ Monetria é uma aplicação de gerenciamento de finanças pessoais, desenvolvida
     - [Categorias](#categorias)
     - [Relatórios](#relatórios)
     - [Configurações](#configurações)
-- [Requisitos do Sistema](#requisitos-do-sistema)
-- [Como Executar](#como-executar)
-- [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
-- [Licença](#licença)
+  - [Requisitos do Sistema](#requisitos-do-sistema)
+  - [Como Executar](#como-executar)
+  - [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
+  - [Licença](#licença)
 
 ---
 
