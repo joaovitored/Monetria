@@ -1,6 +1,6 @@
 # Monetria
 <p align="center">
-  <img src="./Assets/Images/BR/Monetria-Dark-Mode.png" width="340" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Images/BR/Monetria-Dark-Mode.png" width="340" alt="Monetria Logo">
 </p>
 
 **🇧🇷 Português** | [🇺🇸 English](README_en.md)
