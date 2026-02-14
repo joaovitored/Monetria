@@ -1,149 +1,152 @@
+## English Version
+
 # Monetria
+
 <p align="center">
-  <img src="./Monetria/Assets/Images/BR/Monetria-Dark-Mode.png" width="340" alt="Monetria Logo">
+  <img src="./Monetria/Assets/Images/EN/MonetriaIcon_En.png" width="340" alt="Monetria Logo">
 </p>
 
-**🇧🇷 Português** | [🇺🇸 English](README_en.md)
+**🇧🇷 [Português](README.md)** | [🇺🇸 English]
 
-Monetria é uma aplicação de gerenciamento de finanças pessoais, desenvolvida com <a href="https://github.com/AvaloniaUI/Avalonia">Avalonia</a>, .NET 8 e diversas bibliotecas de gráficos e manipulação de planilhas. O app ajuda os usuários a controlar gastos, planejar orçamentos e monitorar sua saúde financeira de forma simples e eficaz.
+Monetria is a personal finance management application developed with <a href="https://github.com/AvaloniaUI/Avalonia">Avalonia</a>, .NET 8, and various libraries for charting and spreadsheet manipulation. The app helps users control their spending, plan budgets, and monitor their financial health in a simple and effective way.
 
 ---
 
-## Índice
+## Table of Contents
 
-- [Funcionalidades por Tópicos](#funcionalidades-por-tópicos)
+- [Features by Topic](#features-by-topic)
     - [Dashboard](#dashboard)
-    - [Transações](#transações)
-    - [Categorias](#categorias)
-    - [Relatórios](#relatórios)
-    - [Configurações](#configurações)
-- [Requisitos do Sistema](#requisitos-do-sistema)
-- [Como Executar](#como-executar)
-- [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
-- [Licença](#licença)
+    - [Transactions](#transactions)
+    - [Categories](#categories)
+    - [Reports](#reports)
+    - [Settings](#settings)
+    - [System Requirements](#system-requirements)
+    - [How to Run](#how-to-run)
+    - [Technologies and Tools Used](#technologies-and-tools-used)
+    - [License](#license)
 
 ---
 
-## Funcionalidades por Tópicos
+## Features by Topic
 
 ### Dashboard
-- Exibe **saldo atual**, total de receitas e despesas.
-- Mostra uma **lista de transações recentes**.
-- Visualização rápida do fluxo financeiro mensal/anual.
+- Displays **current balance**, total income, and expenses.
+- Shows a **list of recent transactions**.
+- Quick view of monthly/annual financial flow.
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/BR/Dashboard.png" width="840" alt="Dashboard">
+  <img src="./Monetria/Assets/Screenshots/Dashboard.png" width="840" alt="Dashboard">
 </p>
 
-### Transações
-- **Adicionar, editar e excluir** receitas e despesas.
-- Registrar **Data,Tipo(Receita/Despesa),Categoria,Descrição e Valor** .
-- Dados armazenados localmente em **JSON**.
-- Funciona offline, sem necessidade de conexão com a internet.
-- Possibilidade de exportar dados para .xlsx (excel).
+### Transactions
+- **Add, edit, and delete** income and expenses.
+- Register **Date, Type (Income/Expense), Category, Description, and Amount**.
+- Data stored locally in **JSON**.
+- Works offline, no internet connection required.
+- Ability to export data to .xlsx (Excel).
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/BR/Transações.png" width="840" alt="Transações">
+  <img src="./Monetria/Assets/Screenshots/Transactions.png" width="840" alt="Transactions">
 </p>
 
-### Categorias
-- Categorize gastos e receitas para análise organizada.
-- Visualização dos gastos por categoria no dashboard ou relatórios.
-- Tabela mostrando as receitas ou despesas por Data,Tipo,Descrição e Valor.
-- Filtro por Todos, Despesa e Receita.
+### Categories
+- Categorize income and expenses for organized analysis.
+- View spending by category on the dashboard or in reports.
+- Table showing income or expenses by Date, Type, Description, and Amount.
+- Filter by All, Expense, and Income.
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/BR/Categorias.png" width="840" alt="Categorias">
+  <img src="./Monetria/Monetria/Assets/Screenshots/Categories.png" width="840" alt="Categories">
 </p>
 
-### Relatórios
-- Gráficos simples de despesas e receitas.
-- Visualização de gastos por categoria.
-- Filtro por mês e ano.
+### Reports
+- Simple graphs for income and expenses.
+- View spending by category.
+- Filter by month and year.
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/BR/Relatório.png" width="840" alt="Relatórios">
+  <img src="./Monetria/Assets/Screenshots/Report.png" width="840" alt="Reports">
 </p>
 
-### Configurações
-- Alternância de tema **claro/escuro**.
-- Resetar os dados dos relatórios.
+### Settings
+- Toggle between **light/dark** theme.
+- Reset report data.
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/BR/Configurações.png" width="840" alt="Configurações">
+  <img src="./Monetria/Assets/Screenshots/Settings.png" width="840" alt="Settings">
 </p>
 
 ---
 
-## Requisitos do Sistema
+## System Requirements
 
-### Sistema Operacional
-- Windows 10/Windows 11 (build 10240+) x64 ou Linux
-- **Observação:** Windows 7, 8 ou 8.1 possivelmente não suportados.
+### Operating System
+- Windows 10/Windows 11 (build 10240+) x64 or Linux
+- **Note:** Windows 7, 8, or 8.1 may not be supported.
 
-### Suporte
-- 64 bits (x64)
+### Support
+- 64-bit (x64)
 
-### Hardware Recomendado
-| Item | Recomendações |
-|------|---------------|
-| Memória RAM | ≥ 512 MB (1 GB+ recomendado para dados e gráficos maiores) |
-| GPU / Gráficos | Suporte mínimo a OpenGL ou DirectX presente no Windows 10+ |
-| Espaço em Disco | Alguns MB para o exe, arquivos temporários e assets |
+### Recommended Hardware
+| Item | Recommendations |
+|------|-----------------|
+| RAM | ≥ 512 MB (1 GB+ recommended for larger data and charts) |
+| GPU/Graphics | Minimum support for OpenGL or DirectX available on Windows 10+ |
+| Disk Space | A few MB for the exe, temporary files, and assets |
 
 ### Software / Runtime
-- Nenhuma instalação do .NET necessária, pois o exe é **self-contained** (inclui runtime .NET 8).
-- Nenhuma instalação adicional de bibliotecas ou Excel necessária.
+- No .NET installation required, as the exe is **self-contained** (includes .NET 8 runtime).
+- No additional library or Excel installation needed.
 
-### Dependências Incluídas / NuGet
-- Avalonia 11.3.11 – Interface do usuário, DataGrid, temas Fluent
-- Skia / SkiaSharp – Renderizador gráfico da UI (DLLs nativas extraídas do exe)
-- ClosedXML 0.105.0 – Manipulação e criação de arquivos Excel (`.xlsx`)
-- LiveChartsCore + SkiaSharpView – Gráficos interativos
-- CommunityToolkit.Mvvm – Helpers para MVVM
-- Actipro Avalonia Pro – Controles e atualização de tela
-- AvaloniaWASM.Storage – Armazenamento local (opcional)
+### Included Dependencies / NuGet
+- Avalonia 11.3.11 – User interface, DataGrid, Fluent themes
+- Skia / SkiaSharp – Graphics renderer for the UI (native DLLs extracted from the exe)
+- ClosedXML 0.105.0 – Handling and creating Excel files (`.xlsx`)
+- LiveChartsCore + SkiaSharpView – Interactive charts
+- CommunityToolkit.Mvvm – MVVM helpers
+- Actipro Avalonia Pro – Advanced controls and screen updates
+- AvaloniaWASM.Storage – Local storage (optional)
 
-### DLLs Nativas Incluídas
+### Included Native DLLs
 - `libSkiaSharp.dll`
 - `libHarfBuzzSharp.dll`
 - `av_libglesv2.dll`
 
-### Observações
-- Publicado como **single-file exe**, ou seja, o usuário só precisa baixar o `.exe` para rodar.
-- Ícone do exe configurado via `<ApplicationIcon>` e exibido na janela do Avalonia.
-- Apenas Windows 10/11 x64 é oficialmente suportado.
+### Notes
+- Published as a **single-file exe**, so the user only needs to download the `.exe` to run.
+- The exe icon is configured via `<ApplicationIcon>` and displayed in the Avalonia window.
+- Officially supported only on Windows 10/11 x64.
 
 ---
 
-## Como Executar
-- Baixe o arquivo `.exe` da release.
-- Clique para abrir — **não é necessário instalar nada**.
+## How to Run
+- Download the `.exe` file from the release.
+- Click to open — **no installation required**.
 
 ---
 
-## Tecnologias e Ferramentas Utilizadas
+## Technologies and Tools Used
 
-### Frameworks e UI
-- AvaloniaUI – Framework XAML multiplataforma para interface gráfica
-- SkiaSharp – Renderização gráfica de alta performance
-- LiveChartsCore – Gráficos interativos
-- Actipro Avalonia Pro – Controles avançados para Avalonia
+### Frameworks and UI
+- AvaloniaUI – Cross-platform XAML-based UI framework
+- SkiaSharp – High-performance graphics rendering
+- LiveChartsCore – Interactive charts
+- Actipro Avalonia Pro – Advanced controls for Avalonia
 
-### Arquitetura e Padrões
-- .NET 8 – Plataforma principal da aplicação
+### Architecture and Patterns
+- .NET 8 – Main platform of the application
 - MVVM (Model-View-ViewModel)
-- CommunityToolkit.Mvvm – Suporte para padrão MVVM
+- CommunityToolkit.Mvvm – Support for MVVM pattern
 
-### Manipulação de Dados
-- System.Text.Json – Serialização JSON (armazenamento local)
-- ClosedXML – Criação e manipulação de arquivos Excel (.xlsx)
+### Data Handling
+- System.Text.Json – JSON serialization (local storage)
+- ClosedXML – Create and manipulate Excel files (.xlsx)
 
-### Ferramentas de Desenvolvimento
+### Development Tools
 - JetBrains Rider
-- AvaloniaRider Plugin – Suporte ao designer visual
+- AvaloniaRider Plugin – Visual designer support
 
 ---
 
-## Licença
+## License
 [MIT](LICENSE)
