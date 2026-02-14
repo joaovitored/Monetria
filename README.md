@@ -46,7 +46,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Ability to export data to .xlsx (Excel).
 
 <p align="center">
-  <img src="./Monetria/Assets/Screenshots/EN/Transactions.png" width="840" alt="Transactions">
+  <img src="./Monetria/Assets/Screenshots/EN/Categories.png" width="840" alt="Transactions">
 </p>
 
 ### Categories
@@ -56,7 +56,7 @@ Monetria is a personal finance management application developed with <a href="ht
 - Filter by All, Expense, and Income.
 
 <p align="center">
-  <img src="./Monetria/Monetria/Assets/Screenshots/EN/Categories.png" width="840" alt="Categories">
+  <img src="./Monetria/Assets/Screenshots/EN/Transactions.png" width="840" alt="Categories">
 </p>
 
 ### Reports
