@@ -7,8 +7,10 @@
         Width="1280" Height="720"
         x:Class="Monetria.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/Images/Monetria-Dark-Mode-icon.png"
-        Title="Monetria">
+        Icon="/Assets/Images/BR/Monetria-Dark-Mode.png"
+        Title="Monetria"
+        WindowState="Maximized"
+        SystemDecorations="Full">
 
     <!-- Utilizando DynamicResources para trocar cores dinamicamente entre os temas -->
     <SplitView IsPaneOpen="{Binding IsPaneOpen}"
@@ -34,8 +36,9 @@
 
                     <!-- Logo -->
                     <Image Grid.Row="1"
-                           Source="../Assets/Images/MonetriaIcon.png"
+                           Source="../Assets/Images/BR/MonetriaIcon.png"
                            HorizontalAlignment="Stretch"
+                           
                            VerticalAlignment="Top" Margin="0,11,10,0" />
 
                     <!-- Menu -->
@@ -43,7 +46,7 @@
                           RowDefinitions="*,Auto"
                           Background="{DynamicResource SystemControlDisabledBaseMediumLowBrush}">
 
-                        <!-- Itens do topo -->
+                       
                         <!-- Itens do topo -->
                         <ListBox Grid.Row="0"
                                  ItemsSource="{Binding ItemsTopo}"

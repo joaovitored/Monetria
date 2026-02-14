@@ -47,7 +47,7 @@
                     <lvc:PieChart Series="{Binding PieSeries}" 
                                   LegendPosition="Left" 
                                   BorderBrush="{DynamicResource SystemAltMediumHighColor}"
-                                  Height="420"/>
+                                  Height="320"/>
 
                 </Border>
 
@@ -77,7 +77,7 @@
                     <lvc:CartesianChart Series="{Binding LineSeries}"
                                         XAxes="{Binding XAxes}"
                                         YAxes="{Binding YAxes}"
-                                        Height="450"/>
+                                        Height="350"/>
 
                 </Border>
 

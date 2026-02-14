@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sBmGTff/wkU=",
+  "dgSpecHash": "AsS9FyE9jPk=",
   "success": true,
   "projectFilePath": "C:\\Users\\Joao Vitor\\Documents\\GitHub\\Monetria\\Monetria\\Monetria.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,7 @@
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\livechartscore.skiasharpview\\2.0.0-rc6.1\\livechartscore.skiasharpview.2.0.0-rc6.1.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\livechartscore.skiasharpview.avalonia\\2.0.0-rc6.1\\livechartscore.skiasharpview.avalonia.2.0.0-rc6.1.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\microcom.runtime\\0.11.0\\microcom.runtime.0.11.0.nupkg.sha512",
+    "C:\\Users\\Joao Vitor\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.24\\microsoft.net.illink.tasks.8.0.24.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\rbush.signed\\4.0.0\\rbush.signed.4.0.0.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\sixlabors.fonts\\1.0.0\\sixlabors.fonts.1.0.0.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\skiasharp\\2.88.9\\skiasharp.2.88.9.nupkg.sha512",
@@ -48,7 +49,10 @@
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.9\\skiasharp.nativeassets.win32.2.88.9.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512",
     "C:\\Users\\Joao Vitor\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
-    "C:\\Users\\Joao Vitor\\.nuget\\packages\\tmds.dbus.protocol\\0.21.2\\tmds.dbus.protocol.0.21.2.nupkg.sha512"
+    "C:\\Users\\Joao Vitor\\.nuget\\packages\\tmds.dbus.protocol\\0.21.2\\tmds.dbus.protocol.0.21.2.nupkg.sha512",
+    "C:\\Users\\Joao Vitor\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.24\\microsoft.netcore.app.runtime.win-x64.8.0.24.nupkg.sha512",
+    "C:\\Users\\Joao Vitor\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.24\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.24.nupkg.sha512",
+    "C:\\Users\\Joao Vitor\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.24\\microsoft.aspnetcore.app.runtime.win-x64.8.0.24.nupkg.sha512"
   ],
   "logs": []
 }
