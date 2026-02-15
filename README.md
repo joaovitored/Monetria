@@ -110,14 +110,14 @@ Monetria é uma aplicação de gerenciamento de finanças pessoais, desenvolvida
 - `av_libglesv2.dll`
 
 ### Observações
-- Publicado como **single-file exe**, ou seja, o usuário só precisa baixar o `.exe` para rodar.
+- Publicado como **single-file exe**, ou seja, o usuário só precisa baixar o `.zip` e abrir o executável para rodar.
 - Ícone do exe configurado via `<ApplicationIcon>` e exibido na janela do Avalonia.
 - Apenas Windows 10/11 x64 é oficialmente suportado.
 
 ---
 
 ## Como Executar
-- Baixe o arquivo `.exe` da release.
+- Baixe o arquivo `.zip` da [**release**](https://github.com/joaovitored/Monetria/releases/tag/Monetriav1.0.0).
 - Clique para abrir — **não é necessário instalar nada**.
 
 ---
